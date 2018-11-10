@@ -1,0 +1,2 @@
+during 'composer install' (had to delete composer.lock)S
+    Package symfony/lts is abandoned, you should avoid using it. Use symfony/flex instead.
