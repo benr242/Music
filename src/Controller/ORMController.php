@@ -60,6 +60,9 @@ class ORMController extends AbstractController
     public function showArtist(ArtistRepository $artistRepository)
     {
 
+        return $this->render('orm/showArtists.html.twig', [
+            'controller_name' => 'ORM Controller',
+        ]);
 
         return $this->json(['name' => 'ben']);
     }
