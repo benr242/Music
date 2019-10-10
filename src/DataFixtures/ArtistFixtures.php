@@ -2,17 +2,18 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Album;
-use App\Entity\Artist;
-use App\Entity\Song;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 
-class AppFixtures extends Fixture
+use App\Entity\Album;
+use App\Entity\Artist;
+use App\Entity\Song;
+
+class ArtistFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-        /*
+
         $nin = new Artist();
         $nin->setName("Nine Inch Nails");
         $manager->persist($nin);
@@ -171,7 +172,7 @@ class AppFixtures extends Fixture
         $song->setNumber(10);
         $song->setLength(500);
         $manager->persist($song);
+
         $manager->flush();
-        */
     }
 }

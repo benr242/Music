@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d181a11-1ebb-4986-befc-ccd46877804c" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -56,19 +57,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Entity/Album.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
+            <state relative-caret-position="90">
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="723">
+              <caret line="174" column="10" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="10" />
+              <folding>
+                <element signature="e#36#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
+        <entry file="file://$PROJECT_DIR$/src/DataFixtures/ArtistFixtures.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="723">
+              <caret line="175" column="26" selection-start-line="175" selection-start-column="26" selection-end-line="175" selection-end-column="26" />
               <folding>
-                <element signature="e#36#57#0#PHP" expanded="true" />
+                <element signature="e#36#79#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,6 +124,7 @@
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/src/Controller/ORMController.php" />
         <option value="$PROJECT_DIR$/src/DataFixtures/AppFixtures.php" />
+        <option value="$PROJECT_DIR$/src/DataFixtures/ArtistFixtures.php" />
       </list>
     </option>
   </component>
@@ -263,6 +277,11 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="DataFixtures" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="break" type="b2602c69:ProjectViewProjectNode" />
+              <item name="break" type="462c0819:PsiDirectoryNode" />
+              <item name="vendor" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -328,12 +347,12 @@
       <workItem from="1559161391192" duration="134000" />
       <workItem from="1559219115475" duration="37000" />
       <workItem from="1570484460015" duration="6555000" />
-      <workItem from="1570560895536" duration="19880000" />
+      <workItem from="1570560895536" duration="22463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47515000" />
+    <option name="totallyTimeSpent" value="50098000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -457,13 +476,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Album.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/Song.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -503,12 +515,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Album.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/DataFixtures/AppFixtures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="723">
+          <caret line="174" column="10" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="10" />
           <folding>
             <element signature="e#36#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataFixtures/ArtistFixtures.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="723">
+          <caret line="175" column="26" selection-start-line="175" selection-start-column="26" selection-end-line="175" selection-end-column="26" />
+          <folding>
+            <element signature="e#36#79#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
