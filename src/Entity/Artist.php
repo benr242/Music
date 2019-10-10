@@ -28,6 +28,11 @@ class Artist
      */
     private $albums;
 
+    /**
+     * @ORM\Column(type="string", length=8)
+     */
+    private $slug;
+
     public function __construct()
     {
         $this->albums = new ArrayCollection();
@@ -77,6 +82,18 @@ class Artist
                 $album->setArtist(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->slug;
+    }
+
+    public function setSlug(string $slug): self
+    {
+        $this->slug = $slug;
 
         return $this;
     }

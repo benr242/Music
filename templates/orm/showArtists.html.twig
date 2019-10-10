@@ -18,9 +18,10 @@
     </div>
 
     Artists: {{ artists | length }}
-    <ul>
+
+    <table>
         {% for artist in artists %}
-            <li>{{ artist.name }}</li>
+            <tr><td>{{ artist.slug }}</td><td>{{ artist.name }}</td></tr>
         {% endfor %}
-    </ul>
+    </table>
 {% endblock %}

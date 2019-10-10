@@ -16,6 +16,7 @@ class ArtistFixtures extends Fixture
 
         $nin = new Artist();
         $nin->setName("Nine Inch Nails");
+        $nin->setSlug("nin");
         $manager->persist($nin);
 
         $phm = new Album();
@@ -95,6 +96,7 @@ class ArtistFixtures extends Fixture
 
         $a23 = new Artist();
         $a23->setName("Assemblage 23");
+        $a23->setSlug("a23");
         $manager->persist($a23);
 
         $storm = new Album();
