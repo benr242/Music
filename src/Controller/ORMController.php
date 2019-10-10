@@ -55,15 +55,15 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/orm/showArtists", name="showArtists")
+     * @Route("/orm/showAllArtists", name="showAllArtists")
      */
-    public function showArtist(ArtistRepository $artistRepository)
+    public function showAllArtists(ArtistRepository $artistRepository)
     {
+        $artists = $artistRepository->findAll();
 
         return $this->render('orm/showArtists.html.twig', [
+            'artists' => $artists,
             'controller_name' => 'ORM Controller',
         ]);
-
-        return $this->json(['name' => 'ben']);
     }
 }
