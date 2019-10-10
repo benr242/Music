@@ -91,6 +91,85 @@ class AppFixtures extends Fixture
         $song->setLength(500);
         $manager->persist($song);
 
+        $a23 = new Artist();
+        $a23->setName("Assemblage 23");
+        $manager->persist($a23);
+
+        $storm = new Album();
+        $storm->setArtist($a23);
+        $storm->setName("Storm");
+        $manager->persist($storm);
+
+
+        $song = new Song();
+        $song->setName("Human");
+        $song->setAlbum($storm);
+        $song->setNumber(1);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("Skin");
+        $song->setAlbum($storm);
+        $song->setNumber(2);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("Ground");
+        $song->setAlbum($storm);
+        $song->setNumber(3);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("Let the Wind Erase Me");
+        $song->setAlbum($storm);
+        $song->setNumber(4);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("Infinite");
+        $song->setAlbum($storm);
+        $song->setNumber(5);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("Complacent");
+        $song->setAlbum($storm);
+        $song->setNumber(6);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("You Haven't Earned It");
+        $song->setAlbum($storm);
+        $song->setNumber(7);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("Regret");
+        $song->setAlbum($storm);
+        $song->setNumber(8);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("Apart");
+        $song->setAlbum($storm);
+        $song->setNumber(9);
+        $song->setLength(500);
+        $manager->persist($song);
+
+        $song = new Song();
+        $song->setName("30kft");
+        $song->setAlbum($storm);
+        $song->setNumber(10);
+        $song->setLength(500);
+        $manager->persist($song);
         $manager->flush();
     }
 }
