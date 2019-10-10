@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Album;
 use App\Entity\Artist;
 use App\Entity\Song;
+use App\Repository\ArtistRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -51,5 +52,15 @@ class ORMController extends AbstractController
         $em->flush();
 
         return new Response('Saved NIN');
+    }
+
+    /**
+     * @Route("/orm/showArtists", name="showArtists")
+     */
+    public function showArtist(ArtistRepository $artistRepository)
+    {
+
+
+        return $this->json(['name' => 'ben']);
     }
 }
