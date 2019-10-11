@@ -4,3 +4,7 @@ during 'composer install' (had to delete composer.lock)S
 ORM
     #edit .env, DATABASE_URL
     $ ./bin/console doctrine:database:create
+
+
+
+     * @Route("/orm/showArtistAlbums", name="artistAlbums", defaults={id : 47}}

@@ -55,8 +55,16 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/orm/showAllArtists", name="showAllArtists")
+     * @Route("/test", name="test")
      */
+    public function test()
+    {
+        return new Response("test response");
+    }
+
+    /**
+     * @Route("/orm/showAllArtists", name="showAllArtists")
+    */
     public function showAllArtists(ArtistRepository $artistRepository)
     {
         $artists = $artistRepository->findAll();
@@ -65,5 +73,15 @@ class ORMController extends AbstractController
             'artists' => $artists,
             'controller_name' => 'ORM Controller',
         ]);
+    }
+
+    /**
+     * @Route("/orm/showArtistAlbums", name="artistAlbums")
+     */
+    public function showAllArtistAlbums()
+    {
+        return new Response('Saved NIN');
+
+        //return $this->render('orm/showArtistAlbum.html.twig');
     }
 }
