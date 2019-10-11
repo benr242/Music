@@ -21,7 +21,7 @@
 
     <table>
         {% for artist in artists %}
-            <tr><td>{{ artist.slug }}</td><td><a href="{{ path('orm', parameters = [], relative =  false) }}">{{ artist.name }}</a></td></tr>
+            <tr><td>{{ artist.id }}</td><td><a href="{{ path('artistAlbums', parameters = {'id':artist.id}, relative =  false) }}">{{ artist.name }}</a></td></tr>
         {% endfor %}
     </table>
 {% endblock %}
