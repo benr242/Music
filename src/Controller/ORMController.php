@@ -83,6 +83,8 @@ class ORMController extends AbstractController
     {
         //return new Response("Saved NIN".$id." "."test");
 
-        return $this->render('orm/showArtistAlbum.html.twig');
+        return $this->render('orm/showArtistAlbum.html.twig',  [
+            'id' => $id,
+        ]);
     }
 }
