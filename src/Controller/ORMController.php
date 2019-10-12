@@ -77,14 +77,14 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/orm/showArtistAlbums/{id}", name="artistAlbums", defaults={"id": 47})
+     * @Route("/orm/showArtistAlbums/{artistId}", name="artistAlbums", defaults={"artistId": 47})
      */
-    public function showArtistAlbums(int $id)
+    public function showArtistAlbums(int $artistId)
     {
         //return new Response("Saved NIN".$id." "."test");
 
         return $this->render('orm/showArtistAlbum.html.twig',  [
-            'id' => $id,
+            'artstId' => $artistId,
         ]);
     }
 }
