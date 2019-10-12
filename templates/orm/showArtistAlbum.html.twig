@@ -9,7 +9,7 @@
     <table>
         {% for album in artistAlbums %}
             <tr>
-                {#<td>{{ album.artist }}</td>#}
+                <td>{{ album.artist.name }}</td>
                 <td>{{ album.name }}</a></td>
             </tr>
         {% endfor %}
