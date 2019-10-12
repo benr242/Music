@@ -82,7 +82,10 @@ class ORMController extends AbstractController
      */
     public function showArtistAlbums(AlbumRepository $albumRepository, int $artistId)
     {
-        $artistAlbums = $albumRepository->findAll();
+        //$artistAlbums = $albumRepository->findAll();
+        $artistAlbums = $albumRepository->findBy(
+            ['artist' => $artistId]
+        );
 
         return $this->render('orm/showArtistAlbum.html.twig',  [
             'artstId' => $artistId,
