@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Album;
 use App\Entity\Artist;
 use App\Entity\Song;
+use App\Repository\AlbumRepository;
 use App\Repository\ArtistRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
@@ -79,12 +80,13 @@ class ORMController extends AbstractController
     /**
      * @Route("/orm/showArtistAlbums/{artistId}", name="artistAlbums", defaults={"artistId": 47})
      */
-    public function showArtistAlbums(int $artistId)
+    public function showArtistAlbums(AlbumRepository $albumRepository, int $artistId)
     {
-        //return new Response("Saved NIN".$id." "."test");
+        $artistAlbums = $albumRepository->findAll();
 
         return $this->render('orm/showArtistAlbum.html.twig',  [
             'artstId' => $artistId,
+            'artistAlbums' => $artistAlbums,
         ]);
     }
 }

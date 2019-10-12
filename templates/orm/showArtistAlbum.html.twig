@@ -5,4 +5,13 @@
 {% block body %}
 
     Whates up {{ artstId }}
+
+    <table>
+        {% for album in artistAlbums %}
+            <tr>
+                {#<td>{{ album.artist }}</td>#}
+                <td>{{ album.name }}</a></td>
+            </tr>
+        {% endfor %}
+    </table>
 {% endblock %}
