@@ -24,6 +24,21 @@ class ArtistFixtures extends Fixture
         $phm->setName("Pretty Hate Machine");
         $phm->setYear(1989);
         $manager->persist($phm);
+        $dosp = new Album();
+        $dosp->setArtist($nin);
+        $dosp->setName("The Downward Spiral");
+        $dosp->setYear(1994);
+        $manager->persist($dosp);
+        $fra = new Album();
+        $fra->setArtist($nin);
+        $fra->setName("The Fragile");
+        $fra->setYear(1999);
+        $manager->persist($fra);
+        $zero = new Album();
+        $zero->setArtist($nin);
+        $zero->setName("Year Zero");
+        $zero->setYear(2007);
+        $manager->persist($zero);
 
         $song = new Song();
         $song->setName("Head Like a Hole");
@@ -105,6 +120,21 @@ class ArtistFixtures extends Fixture
         $storm->setName("Storm");
         $storm->setYear(2004);
         $manager->persist($storm);
+        $end = new Album();
+        $end->setArtist($a23);
+        $end->setName("Endure");
+        $end->setYear(2016);
+        $manager->persist($end);
+        $met = new Album();
+        $met->setArtist($a23);
+        $met->setName("Meta");
+        $met->setYear(2007);
+        $manager->persist($met);
+        $def = new Album();
+        $def->setArtist($a23);
+        $def->setName("Defiancj");
+        $def->setYear(2002);
+        $manager->persist($def);
 
 
         $song = new Song();
