@@ -22,6 +22,7 @@ class ArtistFixtures extends Fixture
         $phm = new Album();
         $phm->setArtist($nin);
         $phm->setName("Pretty Hate Machine");
+        $phm->setYear(1989);
         $manager->persist($phm);
 
         $song = new Song();
@@ -102,6 +103,7 @@ class ArtistFixtures extends Fixture
         $storm = new Album();
         $storm->setArtist($a23);
         $storm->setName("Storm");
+        $storm->setYear(2004);
         $manager->persist($storm);
 
 

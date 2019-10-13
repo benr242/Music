@@ -34,6 +34,11 @@ class Album
      */
     private $songs;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $year;
+
     public function __construct()
     {
         $this->songs = new ArrayCollection();
@@ -95,6 +100,18 @@ class Album
                 $song->setAlbum(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getYear(): ?int
+    {
+        return $this->year;
+    }
+
+    public function setYear(int $year): self
+    {
+        $this->year = $year;
 
         return $this;
     }
