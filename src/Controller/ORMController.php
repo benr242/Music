@@ -86,7 +86,7 @@ class ORMController extends AbstractController
         $artistAlbums = $albumRepository->findBy([
             'artist' => $artistId,
         ], [
-            'year' => 'DESC'
+            'year' => 'ASC'
         ]);
 
         $artist = $artistRepository->findOneBy([
