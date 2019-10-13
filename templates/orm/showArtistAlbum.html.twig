@@ -3,20 +3,21 @@
 {% block title %}Albums: {{ artistName }}{% endblock %}
 
 {% block body %}
+    {#
     Artist ID: {{ artstId }}</br>
     Album Count: {{ artistAlbums|length }}
+            {{ YEP }}
+#}
+    {% if artistAlbums|length > 6 %}{% endif %}
 
-    {% if artistAlbums|length > 6 %}
+    {#itistname: {{ artistName }}#}
 
-    {% endif %}
-
-    aritistname: {{ artistName }}
-
+    <h3>{{ artistName }}</h3>
     {% for album in artistAlbums %}
      <div class="row">
-         <div class="col-md-6">{{ album.artist.name }}</div>
-         <div class="col-md-2">{{ album.year }}</div>
-         <div class="col-md-4">{{ album.name }}</div>
+         {#<div class="col-md-6">{{ album.artist.name }}</div>#}
+         <div class="col-md-4">{{ album.year }}</div>
+         <div class="col-md-8">{{ album.name }}</div>
      </div>
      {% endfor %}
 

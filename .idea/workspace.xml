@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d181a11-1ebb-4986-befc-ccd46877804c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/ORMController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ORMController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -57,8 +56,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+            <state relative-caret-position="135">
+              <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -388,12 +387,12 @@
       <workItem from="1570560895536" duration="39555000" />
       <workItem from="1570759221159" duration="10531000" />
       <workItem from="1570805132370" duration="17177000" />
-      <workItem from="1570970578787" duration="8293000" />
+      <workItem from="1570970578787" duration="9787000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103191000" />
+    <option name="totallyTimeSpent" value="104685000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -588,8 +587,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        <state relative-caret-position="135">
+          <caret line="9" column="2" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
         </state>
       </provider>
     </entry>
