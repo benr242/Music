@@ -89,6 +89,7 @@ class ORMController extends AbstractController
 
         return $this->render('orm/showArtistAlbum.html.twig',  [
             'artstId' => $artistId,
+            'artistName' => $artistId,
             'artistAlbums' => $artistAlbums,
         ]);
     }

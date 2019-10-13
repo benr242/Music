@@ -1,17 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Show Artist Albums{% endblock %}
+{% block title %}Albums: {{ artistName }}{% endblock %}
 
 {% block body %}
 
     Whates up {{ artstId }}
 
-    <table>
+    <div class="container">
         {% for album in artistAlbums %}
-            <tr>
-                <td>{{ album.artist.name }}</td>
-                <td>{{ album.name }}</a></td>
-            </tr>
+            <div class="row">
+                <div class="col-md-6">{{ album.artist.name }}</div>
+                <div class="col-md-6">{{ album.name }}</div>
+            </div>
         {% endfor %}
-    </table>
+    </div>
 {% endblock %}
