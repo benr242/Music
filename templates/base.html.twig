@@ -20,11 +20,10 @@
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     </head>
     <body>
-        <div class="container">
-        {% block body %}    test skel
-        {% endblock %}
-        </div>
-
+        <main class="container">
+            {% block body %}    test skel
+            {% endblock %}
+        </main>
         {% block javascripts %}
 
             {# must be at the end of <body> tag #}
