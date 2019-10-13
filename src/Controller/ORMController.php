@@ -80,16 +80,20 @@ class ORMController extends AbstractController
     /**
      * @Route("/orm/showArtistAlbums/{artistId}", name="artistAlbums", defaults={"artistId": 47})
      */
-    public function showArtistAlbums(AlbumRepository $albumRepository, int $artistId)
+    public function showArtistAlbums(ArtistRepository $artistRepository, AlbumRepository $albumRepository, int $artistId)
     {
         //$artistAlbums = $albumRepository->findAll();
         $artistAlbums = $albumRepository->findBy(
             ['artist' => $artistId]
         );
 
+        $artist = $artistRepository->findOneBy([
+            'id' => $artistId,
+        ]);
+
         return $this->render('orm/showArtistAlbum.html.twig',  [
             'artstId' => $artistId,
-            'artistName' => $artistId,
+            'artistName' => $artist->getName(),
             'artistAlbums' => $artistAlbums,
         ]);
     }
