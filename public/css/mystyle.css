@@ -2,6 +2,12 @@ body {
     background-color: powderblue;
 }
 
+table.albums {
+    width: 75%;
+}
+table, th, td {
+    border: 1px solid white;
+}
 .blue {
     color: #0000FF;
 }
