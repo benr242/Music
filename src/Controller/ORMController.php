@@ -83,6 +83,9 @@ class ORMController extends AbstractController
     public function showArtistAlbums(ArtistRepository $artistRepository, AlbumRepository $albumRepository, int $artistId)
     {
         //$artistAlbums = $albumRepository->findAll();
+
+        //first arguement is the 'WHERE' (can be empty, ALL)
+        //second orguement is ORDER ('DESC' or 'ASC')
         $artistAlbums = $albumRepository->findBy(
             ['artist' => $artistId],
             ['year' => 'ASC']
