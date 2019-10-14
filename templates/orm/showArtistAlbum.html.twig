@@ -13,12 +13,14 @@
     {#itistname: {{ artistName }}#}
 
     <h3>{{ artistName }}</h3>
+    <table .table>
     {% for album in artistAlbums %}
+        <tr><td>
      <div class="row">
-         {#<div class="col-md-6">{{ album.artist.name }}</div>#}
          <div class="col-md-4">{{ album.year }}</div>
          <div class="col-md-8">{{ album.name }}</div>
      </div>
-     {% endfor %}
-
+        </td></td>
+    {% endfor %}
+    </table>
 {% endblock %}

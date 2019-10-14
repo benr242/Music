@@ -10,4 +10,13 @@ body {
     background:  #5cb85c;
 }
 
+/*
+.row :nth-child(even){
+    background-color: #0c5460;
+}
+.row :nth-child(odd){
+    background-color: #6c757d;
+}
+*/
+
 
