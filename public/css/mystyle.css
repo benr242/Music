@@ -5,10 +5,12 @@ body {
 table.albums {
     width: 75%;
 }
+/*
 table, th, td {
     border: 1px solid white;
 }
-
+*/
+/*
 tr.albums:nth-child(even)
 {
     background-color: #8959A8;
@@ -18,6 +20,8 @@ tr.albums:nth-child(odd)
 {
     background-color: #5cb85c;
 }
+*/
+
 
 .blue {
     color: #0000FF;
