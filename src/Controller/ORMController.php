@@ -87,7 +87,7 @@ class ORMController extends AbstractController
         //first arguement is the 'WHERE' (can be empty, ALL)
         //second orguement is ORDER ('DESC' or 'ASC')
         $artistAlbums = $albumRepository->findBy(
-            ['artist' => $artistId/*, 'name' => 'storm'*/],
+            ['artist' => $artistId],
             ['year' => 'ASC']
         );
 

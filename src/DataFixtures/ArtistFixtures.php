@@ -132,7 +132,7 @@ class ArtistFixtures extends Fixture
         $manager->persist($met);
         $def = new Album();
         $def->setArtist($a23);
-        $def->setName("Defiancj");
+        $def->setName("Defiance");
         $def->setYear(2002);
         $manager->persist($def);
 
