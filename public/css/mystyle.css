@@ -39,5 +39,31 @@ tr.albums:nth-child(odd)
     background-color: #6c757d;
 }
 */
+/*
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+    display: inline;
+}
+*/
+li a {
+    display: inline;
+    color: #6f42c1;
+}
+/*
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111111;
+}
+*/
 
 
