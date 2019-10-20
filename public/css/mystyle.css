@@ -51,8 +51,14 @@ ul {
 */
 li a {
     display: inline;
-    color: #6f42c1;
+    color: powderblue;
 }
+
+.active {
+    background-color: #0c5460;
+    color: white;
+}
+
 /*
 li a {
     display: block;
