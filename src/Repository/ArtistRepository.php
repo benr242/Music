@@ -19,6 +19,24 @@ class ArtistRepository extends ServiceEntityRepository
         parent::__construct($registry, Artist::class);
     }
 
+    /**
+     * @param object $entity
+     */
+    public function save($entity)
+    {
+        $this->_em->persist($entity);
+        $this->_em->flush();
+    }
+
+    /**
+     * @param object $entity
+     */
+    public function delete($entity)
+    {
+        $this->_em->remove($entity);
+        $this->_em->flush();
+    }
+    
     // /**
     //  * @return Artist[] Returns an array of Artist objects
     //  */
