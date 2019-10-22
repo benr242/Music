@@ -66,10 +66,13 @@ class ORMController extends AbstractController
     /**
      * @Route("/orm/showAllArtists", name="showAllArtists")
     */
-    public function showAllArtists(/*EntityManagerInterface $em,*/ ArtistRepository $artistRepository)
+    public function showAllArtists(EntityManagerInterface $em, ArtistRepository $artistRepository)
     {
+        $artistRep = $em->getRepository(Artist::class);
+        $artists = $artistRep->findAll();
         //$artists = $em->getRepository(Artist::class)->findAll();
-        $artists = $artistRepository->findAll();
+
+        //$artists = $artistRepository->findAll();
 
         return $this->render('orm/showArtists.html.twig', [
             'artists' => $artists,

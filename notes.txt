@@ -8,3 +8,6 @@ ORM
 
 
      * @Route("/orm/showArtistAlbums", name="artistAlbums", defaults={id : 47}}
+
+Bootstrap
+Fixtures to add Artists and Album
