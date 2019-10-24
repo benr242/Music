@@ -37,6 +37,16 @@ class ArtistRepository extends ServiceEntityRepository
         $this->_em->flush();
     }
 
+    public function findAllOrdered()
+    {
+        $qb = $this->createQueryBuilder('art')
+            ->addOrderBy('art.name', 'ASC');
+        $query = $qb->getQuery();
+        //var_dump($query->getDQL());die;
+
+        return $query->execute();
+    }
+
     // /**
     //  * @return Artist[] Returns an array of Artist objects
     //  */
