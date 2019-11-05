@@ -23,7 +23,8 @@
         {% for artist in artists %}
             <tr>
                 <td>{{ artist.id }}</td>
-                <td><a href="{{ path('artistAlbums', parameters = {'artistId':artist.id, 'artist':artist.name}, relative =  false) }}">{{ artist.name }}</a></td>
+                {#<td><a href="{{ path('artistAlbums', parameters = {'artistId':artist.id, 'artist':artist.name}, relative =  false) }}">{{ artist.name }}</a></td>#}
+                <td><a href="{{ path('artistAlbums', {'artistId':artist.id, 'artistName':artist.name}, relative =  false) }}">{{ artist.name }}</a></td>
             </tr>
         {% endfor %}
     </table>

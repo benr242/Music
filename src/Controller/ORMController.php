@@ -64,7 +64,8 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/orm/showAllArtists", name="showAllArtists")
+     * @Route("/orm/showAllArtists",
+     *     name="showAllArtists")
     */
     public function showAllArtists(EntityManagerInterface $em, ArtistRepository $artistRep)
     {
@@ -81,7 +82,9 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/orm/showArtistAlbums/{artistId}", name="artistAlbums", defaults={"artistId": 47})
+     * @Route("/orm/showArtistAlbums/{artistId}",
+     *     name="artistAlbums",
+     *     defaults={"artistId": 47})
      */
     public function showArtistAlbums(ArtistRepository $artistRepository, AlbumRepository $albumRepository, int $artistId)
     {
