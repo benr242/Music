@@ -16,7 +16,8 @@ use Symfony\Component\Routing\Annotation\Route;
 class ORMController extends AbstractController
 {
     /**
-     * @Route("/orm", name="orm")
+     * @Route("/orm", 
+     *     name="orm")
      */
     public function index()
     {
@@ -26,7 +27,8 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/orm/add", name="orm-add")
+     * @Route("/orm/add",
+     *     name="orm-add")
      */
     public function addDummy(EntityManagerInterface $em)
     {
