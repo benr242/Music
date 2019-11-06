@@ -5,11 +5,13 @@ namespace App\Controller;
 use App\Entity\Album;
 use App\Entity\Artist;
 use App\Entity\Song;
+use App\Form\ArtistType;
 use App\Repository\AlbumRepository;
 use App\Repository\ArtistRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -108,6 +110,31 @@ class ORMController extends AbstractController
             'artstId' => $artistId,
             'artistName' => $artist->getName(),
             'artistAlbums' => $artistAlbums,
+        ]);
+    }
+
+    /**
+     * @Route("/orm/addArtist",
+     *      name="addArtist")
+     */
+    public function addArtist(Request $request, EntityManagerInterface $em)
+    {
+        $artist = new Artist();
+        $artist->setName("artist name");
+
+        $artistForm = $this->createForm(ArtistType::class, $artist);
+        $artistForm->handleRequest($request);
+
+        if($artistForm->isSubmitted() && $artistForm->isValid()) {
+            $artist = $artistForm->getData();
+
+            $em->persist($artist);
+            $em->flush();
+        }
+
+        return $this->render('orm/addArtist.html.twig', [
+            'controller_name' => 'test controller',
+            'artistForm' => $artistForm->createView(),
         ]);
     }
 }
