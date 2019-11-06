@@ -16,7 +16,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ORMController extends AbstractController
 {
     /**
-     * @Route("/orm", 
+     * @Route("/orm",
      *     name="orm")
      */
     public function index()
@@ -58,7 +58,8 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/test", name="test")
+     * @Route("/test",
+     *     name="test")
      */
     public function test()
     {
@@ -86,7 +87,7 @@ class ORMController extends AbstractController
     /**
      * @Route("/orm/showArtistAlbums/{artistId}",
      *     name="artistAlbums",
-     *     defaults={"artistId": 47})
+     *     defaults={"artistId": 59})
      */
     public function showArtistAlbums(ArtistRepository $artistRepository, AlbumRepository $albumRepository, int $artistId)
     {
