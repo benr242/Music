@@ -130,11 +130,22 @@ class ORMController extends AbstractController
 
             $em->persist($artist);
             $em->flush();
+
+            return $this->redirectToRoute('success');
+
         }
 
         return $this->render('orm/addArtist.html.twig', [
-            'controller_name' => 'test controller',
             'artistForm' => $artistForm->createView(),
         ]);
+    }
+
+    /**
+     * @Route("/orm/success",
+     *      name="success")
+     */
+    public function success()
+    {
+        return $this->render('orm/sussess.html.twig');
     }
 }
