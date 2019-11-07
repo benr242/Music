@@ -7,8 +7,10 @@ use App\Entity\Artist;
 use App\Entity\Song;
 use App\Form\AlbumType;
 use App\Form\ArtistType;
+use App\Form\SongType;
 use App\Repository\AlbumRepository;
 use App\Repository\ArtistRepository;
+use App\Repository\SongRepository;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -172,6 +174,32 @@ class ORMController extends AbstractController
 
         return $this->render('orm/addAlbum.html.twig', [
             'albumForm' => $albumForm->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/orm/addSong",
+     *      name="addSong")
+     */
+    public function addSong(Request $request, EntityManagerInterface $em, SongRepository $songRepository)
+    {
+        $song = new Song();
+        $song->setName("new song");
+
+        $songForm = $this->createForm(SongType::class, $song);
+        $songForm->handleRequest($request);
+
+        if($songForm->isSubmitted() && $songForm->isValid()) {
+            $song = $songForm->getData();
+
+            $em->persist($song);
+            $em->flush();
+
+            return $this->redirectToRoute('success');
+        }
+
+        return $this->render('orm/addSong.html.twig', [
+            'songForm' => $songForm->createView(),
         ]);
     }
 
