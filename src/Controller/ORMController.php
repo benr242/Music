@@ -129,14 +129,16 @@ class ORMController extends AbstractController
             $artist = $artistForm->getData();
 
             //no duplicate names
+            //not used anymore bc validation
             $entity = $artistRepository->findOneBy([
                 'name' => $artist->getName(),
             ]);
 
             if(!$entity) {
-                $em->persist($artist);
-                $em->flush();
             }
+
+            $em->persist($artist);
+            $em->flush();
 
             return $this->redirectToRoute('success');
         }
