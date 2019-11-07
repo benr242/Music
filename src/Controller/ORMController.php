@@ -117,7 +117,7 @@ class ORMController extends AbstractController
      * @Route("/orm/addArtist",
      *      name="addArtist")
      */
-    public function addArtist(Request $request, EntityManagerInterface $em)
+    public function addArtist(Request $request, EntityManagerInterface $em, ArtistRepository $artistRepository)
     {
         $artist = new Artist();
         $artist->setName("artist name");
@@ -128,8 +128,19 @@ class ORMController extends AbstractController
         if($artistForm->isSubmitted() && $artistForm->isValid()) {
             $artist = $artistForm->getData();
 
-            $em->persist($artist);
-            $em->flush();
+            $name = $artist->getName();
+
+            //$entity = $em->getRepository('B4PGround0Bundle:Blog\\Blog')->find($id);
+            $entity = $artistRepository->findOneBy([
+                'name' => $artist->getName(),
+            ]);
+
+            //if($artistRepository->)
+
+            if(!$entity) {
+                $em->persist($artist);
+                $em->flush();
+            }
 
             return $this->redirectToRoute('success');
 
