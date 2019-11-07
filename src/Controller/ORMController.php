@@ -123,7 +123,20 @@ class ORMController extends AbstractController
      */
     public function showAlbumSongs(AlbumRepository $albumRepository, SongRepository $songRepository, int $albumId)
     {
-        
+        $albumSongs = $songRepository->findBy(
+          ['album' => $albumId],
+          ['number' => 'ASC']
+        );
+
+        $album = $albumRepository->findOneBy([
+            'id' => $albumId,
+        ]);
+
+        return $this->render('orm/showAlbumSong.html.twig', [
+            'albumId' => $albumId,
+            'albumName' => $album->getName(),
+            'albumSongs' => $albumSongs,
+        ]);
     }
 
     /**
