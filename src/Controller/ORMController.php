@@ -128,15 +128,10 @@ class ORMController extends AbstractController
         if($artistForm->isSubmitted() && $artistForm->isValid()) {
             $artist = $artistForm->getData();
 
-            $name = $artist->getName();
-
-            //$entity = $em->getRepository('B4PGround0Bundle:Blog\\Blog')->find($id);
             $entity = $artistRepository->findOneBy([
                 'name' => $artist->getName(),
             ]);
-
-            //if($artistRepository->)
-
+            
             if(!$entity) {
                 $em->persist($artist);
                 $em->flush();
