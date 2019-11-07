@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Album;
 use App\Entity\Artist;
 use App\Entity\Song;
+use App\Form\AlbumType;
 use App\Form\ArtistType;
 use App\Repository\AlbumRepository;
 use App\Repository\ArtistRepository;
@@ -145,6 +146,32 @@ class ORMController extends AbstractController
 
         return $this->render('orm/addArtist.html.twig', [
             'artistForm' => $artistForm->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/orm/addAlbum",
+     *      name="addAlbum")
+     */
+    public function addAlbum(Request $request, EntityManagerInterface $em, AlbumRepository $albumRepository)
+    {
+        $album = new Album();
+        $album->setName("new Album");
+
+        $albumForm = $this->createForm(AlbumType::class, $album);
+        $albumForm->handleRequest($request);
+
+        if($albumForm->isSubmitted() && $albumForm->isValid()) {
+            $album = $albumForm->getData();
+
+            $em->persist($album);
+            $em->flush();
+
+            return $this->redirectToRoute('success');
+        }
+
+        return $this->render('orm/addAlbum.html.twig', [
+            'albumForm' => $albumForm->createView(),
         ]);
     }
 
