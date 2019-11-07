@@ -6,6 +6,7 @@ use App\Entity\Album;
 use App\Entity\Artist;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -20,6 +21,8 @@ class AlbumType extends AbstractType
                 'class' => Artist::class,
                 'choice_label' => 'name',
             ])
+            ->add('save', SubmitType::class)
+
         ;
     }
 
