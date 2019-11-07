@@ -128,17 +128,17 @@ class ORMController extends AbstractController
         if($artistForm->isSubmitted() && $artistForm->isValid()) {
             $artist = $artistForm->getData();
 
+            //no duplicate names
             $entity = $artistRepository->findOneBy([
                 'name' => $artist->getName(),
             ]);
-            
+
             if(!$entity) {
                 $em->persist($artist);
                 $em->flush();
             }
 
             return $this->redirectToRoute('success');
-
         }
 
         return $this->render('orm/addArtist.html.twig', [
