@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d181a11-1ebb-4986-befc-ccd46877804c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/Controller/ORMController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ORMController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SongType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SongType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/ORMController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="201" column="35" selection-start-line="201" selection-start-column="35" selection-end-line="201" selection-end-column="35" />
+            <state relative-caret-position="699">
+              <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
               <folding>
                 <element signature="e#34#55#0#PHP" expanded="true" />
                 <element signature="e#3710#3735#0#PHP" expanded="true" />
@@ -110,7 +108,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/orm/addSong.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
@@ -160,10 +158,10 @@
         <option value="$PROJECT_DIR$/src/Entity/Artist.php" />
         <option value="$PROJECT_DIR$/templates/orm/addAlbum.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/AlbumType.php" />
-        <option value="$PROJECT_DIR$/src/Controller/ORMController.php" />
         <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Form/SongType.php" />
         <option value="$PROJECT_DIR$/templates/orm/addSong.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/ORMController.php" />
       </list>
     </option>
   </component>
@@ -291,7 +289,7 @@
       <path value="$PROJECT_DIR$/vendor/symfony/contracts" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="114" />
     <option name="width" value="1900" />
     <option name="height" value="796" />
@@ -417,17 +415,39 @@
       <workItem from="1570759221159" duration="10531000" />
       <workItem from="1570805132370" duration="17177000" />
       <workItem from="1570970578787" duration="73454000" />
-      <workItem from="1572616641372" duration="39503000" />
+      <workItem from="1572616641372" duration="40770000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207855000" />
+    <option name="totallyTimeSpent" value="209122000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.23105656" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23169398" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+    </layout>
+    <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23105656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
@@ -448,7 +468,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -701,20 +721,6 @@
     <entry file="file://$PROJECT_DIR$/src/Entity/Song.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ORMController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="201" column="35" selection-start-line="201" selection-start-column="35" selection-end-line="201" selection-end-column="35" />
-          <folding>
-            <element signature="e#34#55#0#PHP" expanded="true" />
-            <element signature="e#3710#3735#0#PHP" expanded="true" />
-            <element signature="e#4736#4760#0#PHP" expanded="true" />
-            <element signature="e#5504#5527#0#PHP" expanded="true" />
-            <element signature="e#5721#5744#1#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Form/ArtistType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -761,6 +767,20 @@
           <caret line="9" column="16" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ORMController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="699">
+          <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
+          <folding>
+            <element signature="e#34#55#0#PHP" expanded="true" />
+            <element signature="e#3710#3735#0#PHP" expanded="true" />
+            <element signature="e#4736#4760#0#PHP" expanded="true" />
+            <element signature="e#5504#5527#0#PHP" expanded="true" />
+            <element signature="e#5721#5744#1#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

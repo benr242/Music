@@ -117,6 +117,16 @@ class ORMController extends AbstractController
     }
 
     /**
+     * @Route("/orm/showAlbumSongs/{albumId}",
+     *     name="albumSorngs",
+     *     defaults={"albumId": 00})
+     */
+    public function showAlbumSongs(AlbumRepository $albumRepository, SongRepository $songRepository, int $albumId)
+    {
+        
+    }
+
+    /**
      * @Route("/orm/addArtist",
      *      name="addArtist")
      */
