@@ -218,8 +218,10 @@ class ORMController extends AbstractController
             $em->persist($song);
             $em->flush();
 
-            $this->addFlash('success', 'added song: ');
-            return $this->redirectToRoute('success');
+            $flsh = $song->getName();
+
+            $this->addFlash('success', 'added song: '.$flsh);
+            return $this->redirectToRoute('showAllArtists');
         }
 
         return $this->render('orm/addSong.html.twig', [
