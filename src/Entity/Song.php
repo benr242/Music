@@ -8,7 +8,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SongRepository")
  * @UniqueEntity(
- *     fields={"number", }
+ *     fields={"number", "album"}
  * )
  */
 class Song

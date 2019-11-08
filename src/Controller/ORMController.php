@@ -218,6 +218,7 @@ class ORMController extends AbstractController
             $em->persist($song);
             $em->flush();
 
+            $this->addFlash('success', 'added song: ');
             return $this->redirectToRoute('success');
         }
 

@@ -8,15 +8,6 @@
         .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
     </style>
 
-    <div class="example-wrapper">
-        <h1>Hello {{ controller_name }}! ✅</h1>
-
-        This friendly message is coming from:
-        <ul>
-            <li>Your controller at <code><a href="{{ 'src/Controller/ORMController.php'|file_link(0) }}">src/Controller/ORMController.php</a></code></li>
-        </ul>
-    </div>
-
     Artists: {{ artists | length }}
 
     <table>
@@ -28,6 +19,6 @@
         {% endfor %}
     </table>
 
-    test: {{ artists[0].name }}
+    {#test: {{ artists[1].name }}#}
 
 {% endblock %}
