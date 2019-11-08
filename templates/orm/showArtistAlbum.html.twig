@@ -35,7 +35,12 @@
      <div class="row">
          <div class="col-md-2">{{ album.year }}</div>
          <div class="col-md-10">{{ album.name }}</div>
-     </div>
+         <div class="col-md-10"><a href="{{ path('albumSongs', {albumId:album.id}) }}">{{ album.name }}</a></div>
+{#
+            <td>{{ artist.id }}</td>
+            <td><a href="{{ path('artistAlbums', {'artistId':artist.id, 'artistName':artist.name}, relative =  false) }}">{{ artist.name }}</a></td>
+#}
+    </div>
         </td></tr>
     {% endfor %}
         </tbody>
