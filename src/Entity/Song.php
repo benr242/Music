@@ -3,9 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\SongRepository")
+ * @UniqueEntity(
+ *     fields={"number", }
+ * )
  */
 class Song
 {
@@ -33,7 +37,7 @@ class Song
     private $album;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="integer", unique=true)
      */
     private $number;
 
