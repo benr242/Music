@@ -166,6 +166,9 @@ class ORMController extends AbstractController
             $em->persist($artist);
             $em->flush();
 
+            $flash = $artist->getName();
+            $this->addFlash('success', 'added artist: '.$flash);
+
             return $this->redirectToRoute('success');
         }
 
@@ -191,6 +194,10 @@ class ORMController extends AbstractController
 
             $em->persist($album);
             $em->flush();
+
+            $artist = $album->getArtist();
+            $flash = $album->getName().", ";
+            $this->addFlash('success', 'added album: '.$flash);
 
             return $this->redirectToRoute('success');
         }
@@ -218,9 +225,9 @@ class ORMController extends AbstractController
             $em->persist($song);
             $em->flush();
 
-            $flsh = $song->getName();
+            $flash = $song->getName();
+            $this->addFlash('success', 'added song: '.$flash);
 
-            $this->addFlash('success', 'added song: '.$flsh);
             return $this->redirectToRoute('showAllArtists');
         }
 
