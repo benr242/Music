@@ -193,17 +193,17 @@ class ORMController extends AbstractController
 
         if($albumForm->isSubmitted() && $albumForm->isValid()) {
             $album = $albumForm->getData();
-            dump($album);
+
             $em->persist($album);
             $em->flush();
 
             dump($album);
 
             $artist = $album->getArtist();
-            $test= $artist->getName();
+            $artistName = $artist->getName();
 
             $flash = $album->getName().", ";
-            $this->addFlash('success', 'added album: '.$flash."<".$test.">");
+            $this->addFlash('success', 'added album: '.$flash."<".$artistName.">");
 
             return $this->redirectToRoute('success');
         }
