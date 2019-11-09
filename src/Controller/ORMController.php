@@ -17,6 +17,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Session\Session;
 
 class ORMController extends AbstractController
 {
@@ -82,6 +83,7 @@ class ORMController extends AbstractController
         //$artists = $em->getRepository(Artist::class)->findAll();
 
         //$artists = $artistRep->findAll();
+
 
         return $this->render('orm/showArtists.html.twig', [
             'artists' => $artists,
@@ -191,13 +193,17 @@ class ORMController extends AbstractController
 
         if($albumForm->isSubmitted() && $albumForm->isValid()) {
             $album = $albumForm->getData();
-
+            dump($album);
             $em->persist($album);
             $em->flush();
 
+            dump($album);
+
             $artist = $album->getArtist();
+            $test= $artist->getName();
+
             $flash = $album->getName().", ";
-            $this->addFlash('success', 'added album: '.$flash);
+            $this->addFlash('success', 'added album: '.$flash."<".$test.">");
 
             return $this->redirectToRoute('success');
         }
