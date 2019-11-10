@@ -194,6 +194,8 @@ class ORMController extends AbstractController
         if($albumForm->isSubmitted() && $albumForm->isValid()) {
             $album = $albumForm->getData();
 
+            //$album->setName("DUMMY");
+
             $em->persist($album);
             $em->flush();
 
