@@ -1,8 +1,8 @@
-{% extends 'base.html.twig' %}
+{% extends 'bare-base.html.twig' %}
 
 {% block title %}Hello {{ controller_name }}!{% endblock %}
 
-{% block bootstrap %}
+{% block body %}
 <
 {#
 <div class="example-wrapper">
@@ -21,7 +21,7 @@
     </button>
     <a class="navbar-brand" href="#">Tutorial</a>
 
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+    <div class="navbar" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -65,4 +65,4 @@
         </div>
     </div>
 </div>
-{% endblock bootstrap %}
+{% endblock %}
