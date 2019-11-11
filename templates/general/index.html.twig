@@ -1,9 +1,11 @@
-{% extends 'bare-base.html.twig' %}
+{% extends 'bs-base.html.twig' %}
 
 {% block title %}Hello {{ controller_name }}!{% endblock %}
 
 {% block body %}
-    <a class="" href="{{ path('showAllArtists') }}">Artists</a>
+    <div class="text-center">
+        <a class="" href="{{ path('showAllArtists') }}">Artists</a>
+    </div>
 
 {#
 <div class="example-wrapper">
@@ -16,6 +18,12 @@
     </ul>
 </div>
 #}
+    <nav id="topNav" class="container">
+        <div>Home</div>
+        <div>Search</div>
+        <div>Logout</div>
+    </nav>
+
 <div class="container">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

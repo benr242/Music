@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>{% block title %}Welcome!{% endblock %}</title>
 
@@ -25,7 +25,7 @@
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
     </head>
     <body>
-        {% block body %}<h3>bare-base</h3>{% endblock %}
+        {% block body %}<h3>bs-base</h3>{% endblock %}
         {% block javascripts %}
 
             {# must be at the end of <body> tag #}

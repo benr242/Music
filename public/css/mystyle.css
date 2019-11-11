@@ -76,3 +76,14 @@ li a:hover {
     color: #AA3333;
     left: 200px;
 }
+
+nav#topNav {
+    display: flex;
+}
+
+nav#topNav > div {
+    margin: 15px;
+    padding: 5px;
+    border: 5px solid #AA3333;
+
+}
