@@ -28,11 +28,9 @@
         <nav class="navbar navbar-expand-sm bg-dark justify-content-center">
             <ul class="navbar-nav">
                 {#<a class="nav-link" href="{{ path('general') }}">General</a>#}
+
                 <li class="nav-item">
-                     <a class="nav-link" href="{{ path('general') }}">General</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ path('showAllArtists') }}">ORM</a>
+                    <a class="nav-link" href="{{ path('showAllArtists') }}">[ORM]</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('addArtist') }}">Add Artist</a>
@@ -41,6 +39,9 @@
                     <a class="nav-link" href="{{ path('addAlbum') }}">Add Album</a>"
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('addSong') }}">Add Song</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('general') }}">[GENERAL]</a>
                 </li>
             </ul>
         </nav>
