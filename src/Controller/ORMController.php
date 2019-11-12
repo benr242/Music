@@ -222,6 +222,48 @@ class ORMController extends AbstractController
     }
 
     /**
+     * @Route("/orm/artistAddAlbum/{artistId}",
+     *      name="artistAddAlbum")
+    */
+    public function artistAddAlbum(Request $request, int $artistId, ArtistRepository $ar, AlbumRepository $albumRepository)
+    {
+        $album = new Album();
+        $album->setName("new Album");
+
+        $artist = $ar->findOneBy([
+            'id' => $artistId,
+        ]);
+        $album->setArtist($artist);
+
+        $albumForm = $this->createForm(AlbumType::class, $album);
+        $albumForm->handleRequest($request);
+
+        if($albumForm->isSubmitted() && $albumForm->isValid()) {
+            $album = $albumForm->getData();
+
+            //$album->setName("DUMMY");
+
+            $em->persist($album);
+            $em->flush();
+
+            dump($album);
+
+            $artist = $album->getArtist();
+            $artistId = $artist->getId();
+            $artistName = $artist->getName();
+
+            $flash = $album->getName().", ";
+            $this->addFlash('success', 'added album: '.$flash."<".$artistName.">");
+
+            return $this->redirectToRoute('artistAlbums', ['artistId' => $artistId]);
+        }
+
+        return $this->render('orm/addAlbum.html.twig', [
+            'albumForm' => $albumForm->createView(),
+        ]);
+    }
+
+    /**
      * @Route("/orm/addSong",
      *      name="addSong")
      */

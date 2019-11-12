@@ -15,8 +15,10 @@
 
     <h3>artistName: {{ artistName }}</h3>
     <h3>artistId: {{ artistId }}</h3>
-
+    <h3>album count: {{ artistAlbums|length }}</h3>
     <div><a href="{{ path('showAllArtists') }}"><-- Artists</a> </div>
+    <div><a href="{{ path('artistAddAlbum', {artistId:artistId}) }}">Add Album</a>
+
     <div class="row">
     <div class="col-10">
     <table class="table table-bordered table-striped table-hover albums">
