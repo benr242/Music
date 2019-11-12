@@ -245,7 +245,7 @@ class ORMController extends AbstractController
             $arAl = $artistName.":".$albumName;
 
             $flash = $song->getName();
-            $this->addFlash('success', 'added song: '.$flash." ".$artistName.":".$albumName);
+            $this->addFlash('success', 'added song: '.$flash." <".$artistName.">:<".$albumName.">");
 
             return $this->redirectToRoute('showAllArtists');
         }
