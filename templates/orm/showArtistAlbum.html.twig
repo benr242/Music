@@ -7,12 +7,14 @@
     Artist ID: {{ artstId }}</br>
     Album Count: {{ artistAlbums|length }}
             {{ YEP }}
-#}
+    #}
+
     {% if artistAlbums|length > 6 %}{% endif %}
 
     {#itistname: {{ artistName }}#}
 
     <h3>{{ artistName }}</h3>
+    <div><a href="{{ path('showAllArtists') }}">BACK</a> </div>
     <div class="row">
     <div class="col-10">
     <table class="table table-bordered table-striped table-hover albums">
