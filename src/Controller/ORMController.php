@@ -112,14 +112,14 @@ class ORMController extends AbstractController
         ]);
 
         return $this->render('orm/showArtistAlbum.html.twig',  [
-            'artstId' => $artistId,
+            'artistId' => $artist->getId(),
             'artistName' => $artist->getName(),
             'artistAlbums' => $artistAlbums,
         ]);
     }
 
     /**
-     * @Route("/orm/showAlbumSongs/{albumId}",
+     * @Route("/orm/showAlbumSongs/{artistId}/{albumId}",
      *     name="albumSongs",
      *     defaults={"albumId": 66})
      */
@@ -134,7 +134,11 @@ class ORMController extends AbstractController
             'id' => $albumId,
         ]);
 
+        $artist = $album->getArtist();
+        $artistId = $artist->getId();
+
         return $this->render('orm/showAlbumSong.html.twig', [
+            'artistId' => $artistId,
             'albumId' => $albumId,
             'albumName' => $album->getName(),
             'albumSongs' => $albumSongs,

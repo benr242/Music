@@ -13,7 +13,9 @@
 
     {#itistname: {{ artistName }}#}
 
-    <h3>{{ artistName }}</h3>
+    <h3>artistName: {{ artistName }}</h3>
+    <h3>artistId: {{ artistId }}</h3>
+
     <div><a href="{{ path('showAllArtists') }}">BACK</a> </div>
     <div class="row">
     <div class="col-10">
@@ -36,7 +38,7 @@
             <td>
      <div class="row">
          <div class="col-md-2">{{ album.year }}</div>
-         <div class="col-md-10"><a href="{{ path('albumSongs', {albumId:album.id}) }}">{{ album.name }}</a></div>
+         <div class="col-md-10"><a href="{{ path('albumSongs', {albumId:album.id, artistId:artistId}) }}">{{ album.name }}</a></div>
 {#
             <td>{{ artist.id }}</td>
             <td><a href="{{ path('artistAlbums', {'artistId':artist.id, 'artistName':artist.name}, relative =  false) }}">{{ artist.name }}</a></td>
