@@ -248,7 +248,10 @@ class ORMController extends AbstractController
             $flash = $song->getName();
             $this->addFlash('success', 'added song: '.$flash." <".$artistName.">:<".$albumName.">");
 
-            return $this->redirectToRoute('showAllArtists');
+            return $this->redirectToRoute('albumSongs', [
+                'artistId' => $artist->getId(),
+                'albumId' => $album->getId()
+            ]);
         }
 
         return $this->render('orm/addSong.html.twig', [
