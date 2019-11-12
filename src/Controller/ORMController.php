@@ -176,7 +176,7 @@ class ORMController extends AbstractController
             $this->addFlash('success', 'added artist: '.$flash);
 
 
-            return $this->redirectToRoute('success');
+            return $this->redirectToRoute('showAllArtists');
         }
 
         return $this->render('orm/addArtist.html.twig', [
@@ -207,12 +207,13 @@ class ORMController extends AbstractController
             dump($album);
 
             $artist = $album->getArtist();
+            $artistId = $artist->getId();
             $artistName = $artist->getName();
 
             $flash = $album->getName().", ";
             $this->addFlash('success', 'added album: '.$flash."<".$artistName.">");
 
-            return $this->redirectToRoute('success');
+            return $this->redirectToRoute('artistAlbums', ['artistId' => $artistId]);
         }
 
         return $this->render('orm/addAlbum.html.twig', [
