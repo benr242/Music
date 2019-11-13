@@ -277,6 +277,7 @@ class ORMController extends AbstractController
             'id' => $albumId,
         ]);
         $song->setAlbum($album);
+        $artistEntity = $album->getArtist();
 
         $songForm = $this->createForm(SongType::class, $song);
         $songForm->handleRequest($request);
@@ -297,12 +298,14 @@ class ORMController extends AbstractController
             $flash = $albumName.", ".$song->getName();
             $this->addFlash('success', 'added song: '.$flash);
 
-            return $this->redirectToRoute('albumSongs', ['artistId' => $artistId, 'albumId' => $albumId]);
+            return $this->redirectToRoute('albumSongs', ['artistId' => $artistId]);
             //artistId albumId
         }
 
         return $this->render('orm/addSong.html.twig', [
-            'songForm' => $songForm->createView(),                
+            'songForm' => $songForm->createView(),
+            'albumId' => $albumId,
+            'artistId' => $artistEntity->getId(),
         ]);
     }
 
