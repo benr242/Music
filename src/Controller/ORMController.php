@@ -225,7 +225,7 @@ class ORMController extends AbstractController
      * @Route("/orm/artistAddAlbum/{artistId}",
      *      name="artistAddAlbum")
     */
-    public function artistAddAlbum(Request $request, int $artistId, ArtistRepository $ar, AlbumRepository $albumRepository)
+    public function artistAddAlbum(Request $request, int $artistId, EntityManagerInterface $em, ArtistRepository $ar, AlbumRepository $albumRepository)
     {
         $album = new Album();
         $album->setName("new Album");
@@ -262,6 +262,46 @@ class ORMController extends AbstractController
             'albumForm' => $albumForm->createView(),
             'artistId' => $artistId,
         ]);
+    }
+
+    /**
+     * @Route("/orm/albumAddSong/{albumId}",
+     *     name="albumAddSong")
+     */
+    public function albumAddSong(Request $request, int $albumId, EntityManagerInterface $em, AlbumRepository $ar, SongRepository $sr)
+    {
+        $song = new Song();
+        $song->setName("new Song");
+
+        $album = $ar->findOneBy([
+            'id' => $albumId,
+        ]);
+        $song->setAlbum($album);
+
+        $songForm = $this->createForm(SongType::class, $song);
+        $songForm->handleRequest($request);
+
+        if ($songForm->isSubmitted() && $songForm->isValid()) {
+            $song = $songForm->getData();
+
+            $em->persist($song);
+            $em->flush();
+
+            $album = $song->getAlbum();
+            $albumId = $album->getId();
+            $artist = $album->getArtist();
+            $artistId = $artist->getId();
+
+            $albumName = $album->getName();
+
+            $flash = $albumName.", ".$song->getName();
+            $this->addFlash('success', 'added song: '.$flash);
+
+            return $this->redirectToRoute('albumSongs', ['artistId' => $artistId, 'albumId' => $albumId]);
+            //artistId albumId
+        }
+
+        return $this->redirectToRoute('showAllArtists');
     }
 
     /**
