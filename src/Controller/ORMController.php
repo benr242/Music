@@ -301,7 +301,9 @@ class ORMController extends AbstractController
             //artistId albumId
         }
 
-        return $this->redirectToRoute('showAllArtists');
+        return $this->render('orm/addSong.html.twig', [
+            'songForm' => $songForm->createView(),                
+        ]);
     }
 
     /**
