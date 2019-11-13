@@ -125,14 +125,15 @@ class ORMController extends AbstractController
      */
     public function showAlbumSongs(AlbumRepository $albumRepository, SongRepository $songRepository, int $albumId)
     {
-        $albumSongs = $songRepository->findBy(
-          ['album' => $albumId],
-          ['number' => 'ASC']
-        );
 
         $album = $albumRepository->findOneBy([
             'id' => $albumId,
         ]);
+
+        $albumSongs = $songRepository->findBy(
+          ['album' => $album],
+          ['number' => 'ASC']
+        );
 
         $artist = $album->getArtist();
         $artistId = $artist->getId();
@@ -298,7 +299,10 @@ class ORMController extends AbstractController
             $flash = $albumName.", ".$song->getName();
             $this->addFlash('success', 'added song: '.$flash);
 
-            return $this->redirectToRoute('albumSongs', ['artistId' => $artistId]);
+            return $this->redirectToRoute('albumSongs', [
+                'artistId' => $artistId,
+                'albumId' => $albumId,
+            ]);
             //artistId albumId
         }
 
