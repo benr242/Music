@@ -33,13 +33,13 @@
                 {#<a class="nav-link" href="{{ path('general') }}">General</a>#}
                 <a class="navbar-brand" href="{{ path('showAllArtists') }}"><img src="{{ asset('images/spaceDog.png') }}" HEIGHT="40px" width="40px" alt="HOME"></a>
                 <li class="nav-item" id="orm">
-                    <a class="nav-link btn btn-primary" href="{{ path('showAllArtists') }}">[ORM]</a>
+                    <a class="nav-link btn btn-primary active" href="{{ path('showAllArtists') }}">[ORM]</a>
                 </li>
                 <li class="nav-item" id="addartist">
                     <a class="nav-link btn btn-primary" href="{% block addartist %}{{ path('addArtist') }}{% endblock %}">Add Artist</a>
                 </li>
                 <li class="nav-item" id="addalbum">
-                    <a class="nav-link btn btn-primary" href="{% block addalbum %}{{ path('addAlbum') }}{% endblock %}">Add Album</a>"
+                    <a class="nav-link btn btn-primary" href="{% block addalbum %}{{ path('addAlbum') }}{% endblock %}">Add Album</a>
                 <li class="nav-item" id="addsong">
                     {#<a class="nav-link" href="{% block addsong %}{{ path('addSong') }}{% endblock %}">Add Song</a>#}
                     <a class="nav-link btn btn-primary" href="#">Add Song</a>
