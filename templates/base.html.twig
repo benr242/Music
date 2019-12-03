@@ -33,16 +33,16 @@
                 {#<a class="nav-link" href="{{ path('general') }}">General</a>#}
                 <a class="navbar-brand" href="{{ path('showAllArtists') }}"><img src="{{ asset('images/spaceDog.png') }}" HEIGHT="40px" width="40px" alt="HOME"></a>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ path('showAllArtists') }}">[ORM]</a>
+                    <a class="nav-link" class="orm" href="{{ path('showAllArtists') }}">[ORM]</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% block addartist %}{{ path('addArtist') }}{% endblock %}">Add Artist</a>
+                    <a class="nav-link" class="addartist" href="{% block addartist %}{{ path('addArtist') }}{% endblock %}">Add Artist</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% block addalbum %}{{ path('addAlbum') }}{% endblock %}">Add Album</a>"
+                    <a class="nav-link" class="addalbum" href="{% block addalbum %}{{ path('addAlbum') }}{% endblock %}">Add Album</a>"
                 <li class="nav-item">
                     {#<a class="nav-link" href="{% block addsong %}{{ path('addSong') }}{% endblock %}">Add Song</a>#}
-                    <a class="nav-link" href="#">Add Song</a>
+                    <a class="nav-link" class="addsong" href="#">Add Song</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ path('general') }}">[GENERAL]</a>
