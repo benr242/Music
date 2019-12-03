@@ -90,3 +90,7 @@ nav#topNav > div {
 .navbar > a {
     padding: 5px;
 }
+
+.yellow {
+    color: yellow;
+}

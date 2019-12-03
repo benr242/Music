@@ -10,7 +10,7 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArtistRepository")
  * @UniqueEntity(
- *     fields={"name"}
+ *     fields={"name", "slug"}
  * )
  */
 class Artist

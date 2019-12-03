@@ -37,7 +37,7 @@ class Song
     private $album;
 
     /**
-     * @ORM\Column(type="integer", unique=true)
+     * @ORM\Column(type="integer")
      */
     private $number;
 
