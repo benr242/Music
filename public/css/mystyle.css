@@ -87,7 +87,7 @@ nav#topNav > div {
     border: 2px solid #AA3333;
 }
 
-.navbar > a {
+.navbar-nav li {
     padding: 5px;
 }
 
