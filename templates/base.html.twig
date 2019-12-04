@@ -23,6 +23,16 @@
           integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
           crossorigin="anonymous"></script>#}
 
+        <style>
+            {% block menuCss %}
+
+            #addartist {visibility: hidden}
+            #addalbum {visibility: hidden}
+            #addsong {visibility: hidden}
+
+            {% endblock %}
+        </style>
+
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
         {% block menuJ %}{% endblock %}
 
