@@ -2,6 +2,13 @@
 
 {% block title %}Albums: {{ artistName }}{% endblock %}
 
+
+{% block menuCss %}
+    {{ parent() }}
+
+    #addalbum {visibility: visible}
+{% endblock %}
+
 {% block body %}
     {#
     Artist ID: {{ artstId }}</br>

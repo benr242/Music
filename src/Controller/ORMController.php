@@ -186,10 +186,10 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/orm/addAlbum",
+     * @Route("/orm/addAlbum/{artistId}",
      *      name="addAlbum")
      */
-    public function addAlbum(Request $request, EntityManagerInterface $em, AlbumRepository $albumRepository)
+    public function addAlbum(Request $request, EntityManagerInterface $em, AlbumRepository $albumRepository, int $artistId)
     {
         $album = new Album();
         $album->setName("new Album");
