@@ -34,6 +34,17 @@
         </style>
 
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
+        <script>
+            $(document).ready(function () {
+                //$("#addalbum").css("visibility","hidden");
+                $("#addartist").addClass("active");
+                //$("a").addClass("yellow");
+                $('.disabledJ').click(function (e) {
+                    //e.preventDefault();
+                    //alert("disabledJ");
+                });
+            })
+        </script>
         {% block menuJ %}{% endblock %}
 
     </head>
