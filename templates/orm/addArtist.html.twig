@@ -6,6 +6,10 @@
             //$("#addalbum").css("visibility","hidden");
             $("#addartist").addClass("active");
             $("a").addClass("yellow");
+            $('.disabledJ').click(function (e) {
+                e.preventDefault();
+                alert("disabledJ");
+            });
         })
     </script>
 {% endblock %}
