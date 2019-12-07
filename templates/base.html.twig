@@ -78,11 +78,10 @@
                     <a class="nav-link btn btn-primary disabledJ" href="{% block addartist %}{{ path('addArtist') }}{% endblock %}">Add Artist</a>
                 </li>
                 <li class="nav-item" id="addalbum">
-                    {% if artistId is defined %}
-                        <a class="nav-link btn btn-primary" href="{% block addalbum %}{{ path('addAlbum', {artistId:artistId}) }}{% endblock %}">Add Album</a>
-                    {% else %}
-                        <a class="nav-link btn btn-primary" href="">Add Album</a>
+                    {% if not artistId is defined %}
+                        {% set artistId = 0 %}
                     {% endif %}
+                    <a class="nav-link btn btn-primary" href="{% block addalbum %}{{ path('addAlbum', {artistId:artistId}) }}{% endblock %}">Add Album</a>
                 </li>
                 <li class="nav-item" id="addsong">
                     {#<a class="nav-link" href="{% block addsong %}{{ path('addSong') }}{% endblock %}">Add Song</a>#}
@@ -106,7 +105,7 @@
         {% block bootstrap %}{% endblock %}
 
         <main class="container">
-            {% block body %}    test skel
+            {% block body %}
             {% endblock %}
         </main>
         {% block javascripts %}

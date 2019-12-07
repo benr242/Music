@@ -219,6 +219,8 @@ class ORMController extends AbstractController
 
         return $this->render('orm/addAlbum.html.twig', [
             'albumForm' => $albumForm->createView(),
+            'artistId' => $artistId,
+
         ]);
     }
 
