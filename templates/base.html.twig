@@ -37,9 +37,10 @@
         <script>
             $(document).ready(function () {
                 var $current = "{{ app.request.get('_route') }}";
-                var $testVar = "testVar";
-                //alert($testVar);
-                alert($current);
+                if($current == 'addArtist') {
+                    alert($current);
+                }
+
                 //alert("hellso");
                 //$("#addalbum").css("visibility","hidden");
                 $("#addartist").addClass("active");
