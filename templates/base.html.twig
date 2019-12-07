@@ -36,6 +36,11 @@
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
         <script>
             $(document).ready(function () {
+                var $current = "{{ app.request.get('_route') }}";
+                var $testVar = "testVar";
+                //alert($testVar);
+                alert($current);
+                //alert("hellso");
                 //$("#addalbum").css("visibility","hidden");
                 $("#addartist").addClass("active");
                 //$("a").addClass("yellow");
