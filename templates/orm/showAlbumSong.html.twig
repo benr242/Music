@@ -3,6 +3,8 @@
 {% block title %}Songs: {{ albumName }}{% endblock %}
 
 {% block body %}
+    {{ parent() }}
+
     {#
     Artist ID: {{ artstId }}</br>
     Album Count: {{ artistAlbums|length }}
