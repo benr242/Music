@@ -48,10 +48,13 @@
                 //$('nav a').removeClass("btn-primary");
                 //$('nav a').addClass("btn-danger");
 
-                //$('nav a').each(function () {
-                //    $(this).addClass("btn-danger");
-                //})
+                $('nav a').each(function () {
+                    $(this).addClass("btn-danger");
+                })
 
+                $(".test-btn").removeClass("btn-danger");
+                $(".test-btn").text("<general>");
+                $(".test-btn").attr("href", "{{ path('general') }}");
             })
         </script>
         {% block menuJ %}{% endblock %}
@@ -81,6 +84,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link btn btn-primary" href="{{ path('general') }}">[GENERAL]</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary test-btn" href="#">test</a>
                 </li>
             </ul>
         </nav>
