@@ -47,7 +47,9 @@
                     e.preventDefault();
                     //var msq = e.attr("text");
                     //e.addClass("btn-inactive")
-                    alert("disabledJQ:");
+                    //alert("disabledJQ:");
+                    //alert($(this).attr("href"));
+                    alert($(this).text());
                 });
 
                 //$('nav a').attr("href", "#");
@@ -101,7 +103,7 @@
                         </li>
                         <li class="nav-item" id="addsong">
                             {#<a class="nav-link" href="{% block addsong %}{{ path('addSong') }}{% endblock %}">Add Song</a>#}
-                            <a class="nav-link btn btn-primary disabledJQ" href="{{ path('showAllArtists') }}">Add Song</a>
+                            <a class="nav-link btn btn-primary disabledJQ aoeu" href="{{ path('showAllArtists') }}">Add Song</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-primary" href="{{ path('general') }}">[GENERAL]</a>
