@@ -95,6 +95,16 @@ nav#topNav > div {
     padding: 5px;
 }
 
+.btn-active {
+    color: blue;
+    background-color: #5cb85c;
+}
+
+.btn-inactive {
+    background-color: red;
+    color: silver;
+}
+
 .yellow {
     color: yellow;
 }

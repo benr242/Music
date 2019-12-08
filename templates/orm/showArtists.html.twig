@@ -27,12 +27,12 @@
 
     Artists: {{ artists | length }}
 
-
+{#
     <div class="row">
         <div class="col-md-6"><a href="{{ path('showAllArtists') }}"><-- Artists</a> </div>
         <div class="col-md-6"><a href="{{ path('addArtist') }}">Add Artist --></a></div>
     </div>
-
+#}
     <table>
         {% for artist in artists %}
             <tr>
