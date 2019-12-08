@@ -77,8 +77,9 @@
 
         {% block bootstrap %}{% endblock %}
 
-        <main class="container">
+        <main>
             {% block body %}
+                <div class="container">
                 <nav class="navbar navbar-expand-sm justify-content-center">
                     <ul class="navbar-nav">
                         {#<a class="nav-link" href="{{ path('general') }}">General</a>#}
@@ -107,6 +108,7 @@
                         </li>
                     </ul>
                 </nav>
+                </div>
             {% endblock %}
         </main>
         {% block javascripts %}
