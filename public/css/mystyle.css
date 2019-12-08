@@ -77,6 +77,10 @@ li a:hover {
     left: 200px;
 }
 
+nav {
+    color: powderblue;
+}
+
 nav#topNav {
     display: flex;
 }
