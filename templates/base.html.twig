@@ -51,7 +51,7 @@
                     //e.addClass("btn-inactive")
                     //alert("disabledJQ:");
                     //alert($(this).attr("href"));
-                    alert($(this).text());
+                    alert("disabled: " + $(this).text());
                 });
 
                 //$('nav a').attr("href", "#");
@@ -91,8 +91,8 @@
                     <ul class="navbar-nav">
                         {#<a class="nav-link" href="{{ path('general') }}">General</a>#}
                         <a class="navbar-brand" href="{{ path('showAllArtists') }}"><img src="{{ asset('images/spaceDog.png') }}" HEIGHT="40px" width="40px" alt="HOME"></a>
-                        <li id="orm" class="nav-item">
-                            <a class="nav-link btn btn-primary active" href="{{ path('showAllArtists') }}">[ORM]</a>
+                        <li id="artists" class="nav-item">
+                            <a class="nav-link btn btn-primary active" href="{{ path('showAllArtists') }}">Artists</a>
                         </li>
                         <li id="addartist" class="nav-item">
                             <a class="nav-link btn btn-primary" href="{% block addartist %}{{ path('addArtist') }}{% endblock %}">Add Artist</a>

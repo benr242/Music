@@ -20,6 +20,8 @@ class AlbumType extends AbstractType
             ->add('artist', EntityType::class, [
                 'class' => Artist::class,
                 'choice_label' => 'name',
+                //'multiple' => 'true',
+                //'expanded' => 'true',
             ])
             ->add('save', SubmitType::class)
 
