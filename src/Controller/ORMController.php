@@ -238,7 +238,10 @@ class ORMController extends AbstractController
         $artist = $ar->findOneBy([
             'id' => $artistId,
         ]);
-        $album->setArtist($artist);
+
+        if ($artist) {
+            $album->setArtist($artist);
+        }
 
         $albumForm = $this->createForm(AlbumType::class, $album);
         $albumForm->handleRequest($request);
