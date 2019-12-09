@@ -39,11 +39,13 @@
                     alert($current);
                 }
 
+                //$(#addartist).addClass("disabledJQ");
+
                 //alert("hellso");
                 //$("#addalbum").css("visibility","hidden");
                 //$("#addartist").addClass("active");
                 //$("a").addClass("yellow");
-                $('.disabledJQ').click(function (e) {
+                $("li.disabledJQ > a").click(function (e) {
                     e.preventDefault();
                     //var msq = e.attr("text");
                     //e.addClass("btn-inactive")
@@ -89,21 +91,21 @@
                     <ul class="navbar-nav">
                         {#<a class="nav-link" href="{{ path('general') }}">General</a>#}
                         <a class="navbar-brand" href="{{ path('showAllArtists') }}"><img src="{{ asset('images/spaceDog.png') }}" HEIGHT="40px" width="40px" alt="HOME"></a>
-                        <li class="nav-item" id="orm">
+                        <li id="orm" class="nav-item">
                             <a class="nav-link btn btn-primary active" href="{{ path('showAllArtists') }}">[ORM]</a>
                         </li>
-                        <li class="nav-item" id="addartist">
+                        <li id="addartist" class="nav-item btn-inactive disabledJQ">
                             <a class="nav-link btn btn-primary" href="{% block addartist %}{{ path('addArtist') }}{% endblock %}">Add Artist</a>
                         </li>
-                        <li class="nav-item" id="addalbum">
+                        <li id="addalbum class="nav-item"">
                             {% if not artistId is defined %}
                                 {% set artistId = 0 %}
                             {% endif %}
                             <a class="nav-link btn btn-primary" href="{% block addalbum %}{{ path('addAlbum', {artistId:artistId}) }}{% endblock %}">Add Album</a>
                         </li>
-                        <li class="nav-item" id="addsong">
+                        <li id="addsong" class="nav-item disabledJQ">
                             {#<a class="nav-link" href="{% block addsong %}{{ path('addSong') }}{% endblock %}">Add Song</a>#}
-                            <a class="nav-link btn btn-primary disabledJQ aoeu" href="{{ path('showAllArtists') }}">Add Song</a>
+                            <a class="nav-link btn btn-primary aoeu" href="{{ path('showAllArtists') }}">Add Song</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-primary" href="{{ path('general') }}">[GENERAL]</a>

@@ -105,6 +105,15 @@ nav#topNav > div {
     color: silver;
 }
 
+li.disabledJQ > a {
+    background-color: #8fd19e;
+}
+
+.disabledJQ{
+    background-color: #8959A8;
+
+}
+
 .yellow {
     color: yellow;
 }
