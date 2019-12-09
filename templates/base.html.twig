@@ -101,7 +101,7 @@
                             {% if not artistId is defined %}
                                 {% set artistId = 0 %}
                             {% endif %}
-                            <a class="nav-link btn btn-primary" href="{% block addalbum %}{{ path('addAlbum', {artistId:artistId}) }}{% endblock %}">Add Album</a>
+                            <a class="nav-link btn btn-primary" href="{% block addalbum %}{{ path('artistAddAlbum', {artistId:artistId}) }}{% endblock %}">Add Album</a>
                         </li>
                         <li id="addsong" class="nav-item disabledJQ">
                             {#<a class="nav-link" href="{% block addsong %}{{ path('addSong') }}{% endblock %}">Add Song</a>#}
