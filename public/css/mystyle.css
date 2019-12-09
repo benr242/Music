@@ -105,8 +105,9 @@ nav#topNav > div {
     color: silver;
 }
 
+/* through jquery, disables a link */
 li.disabledJQ > a {
-    background-color: #8fd19e;
+    background-color: yellow;
 }
 
 .disabledJQ{

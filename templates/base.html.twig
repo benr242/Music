@@ -94,10 +94,10 @@
                         <li id="orm" class="nav-item">
                             <a class="nav-link btn btn-primary active" href="{{ path('showAllArtists') }}">[ORM]</a>
                         </li>
-                        <li id="addartist" class="nav-item btn-inactive disabledJQ">
+                        <li id="addartist" class="nav-item">
                             <a class="nav-link btn btn-primary" href="{% block addartist %}{{ path('addArtist') }}{% endblock %}">Add Artist</a>
                         </li>
-                        <li id="addalbum class="nav-item"">
+                        <li id="addalbum class="nav-item">
                             {% if not artistId is defined %}
                                 {% set artistId = 0 %}
                             {% endif %}
@@ -105,7 +105,7 @@
                         </li>
                         <li id="addsong" class="nav-item disabledJQ">
                             {#<a class="nav-link" href="{% block addsong %}{{ path('addSong') }}{% endblock %}">Add Song</a>#}
-                            <a class="nav-link btn btn-primary aoeu" href="{{ path('showAllArtists') }}">Add Song</a>
+                            <a class="nav-link btn btn-primary" href="{{ path('showAllArtists') }}">Add Song</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-primary" href="{{ path('general') }}">[GENERAL]</a>

@@ -187,7 +187,8 @@ class ORMController extends AbstractController
 
     /**
      * @Route("/orm/addAlbum/{artistId}",
-     *      name="addAlbum")
+     *          defaults={"artistId" = 0},
+     *          name="addAlbum")
      */
     public function addAlbum(Request $request, EntityManagerInterface $em, AlbumRepository $albumRepository, int $artistId)
     {
@@ -226,6 +227,7 @@ class ORMController extends AbstractController
 
     /**
      * @Route("/orm/artistAddAlbum/{artistId}",
+     *      defaults={"artistId" = 0},
      *      name="artistAddAlbum")
     */
     public function artistAddAlbum(Request $request, int $artistId, EntityManagerInterface $em, ArtistRepository $ar, AlbumRepository $albumRepository)
