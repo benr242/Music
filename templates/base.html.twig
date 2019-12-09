@@ -94,20 +94,20 @@
                         <li id="artists" class="nav-item">
                             <a class="nav-link btn btn-primary active" href="{{ path('showAllArtists') }}">Artists</a>
                         </li>
-                        <li id="addartist" class="nav-item">
+                        <li id="addArtist" class="nav-item">
                             <a class="nav-link btn btn-primary" href="{% block addartist %}{{ path('addArtist') }}{% endblock %}">Add Artist</a>
                         </li>
-                        <li id="addalbum class="nav-item">
+                        <li id="artistAddAlbum" class="nav-item">
                             {% if not artistId is defined %}
                                 {% set artistId = 0 %}
                             {% endif %}
                             <a class="nav-link btn btn-primary" href="{% block addalbum %}{{ path('artistAddAlbum', {artistId:artistId}) }}{% endblock %}">Add Album</a>
                         </li>
-                        <li id="addsong" class="nav-item disabledJQ">
+                        <li id="albumAddSong" class="nav-item disabledJQ">
                             {#<a class="nav-link" href="{% block addsong %}{{ path('addSong') }}{% endblock %}">Add Song</a>#}
                             <a class="nav-link btn btn-primary" href="{{ path('showAllArtists') }}">Add Song</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="general" class="nav-item">
                             <a class="nav-link btn btn-primary" href="{{ path('general') }}">[GENERAL]</a>
                         </li>
                         <li class="nav-item">
