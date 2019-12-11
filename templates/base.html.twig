@@ -45,13 +45,21 @@
                 //$("#addalbum").css("visibility","hidden");
                 //$("#addartist").addClass("active");
                 //$("a").addClass("yellow");
-                $("li.disabledJQ > a").click(function (e) {
-                    e.preventDefault();
+                $("li.disabledJQ > a").click(function (evt) { //e alias for event object
+                    var target = evt.target;
+
+                    evt.preventDefault();
                     //var msq = e.attr("text");
                     //e.addClass("btn-inactive")
                     //alert("disabledJQ:");
+
                     //alert($(this).attr("href"));
-                    alert("disabled: " + $(this).text());
+                    //alert($(this).attr("class"));
+
+
+                    //alert("disabled: " + $(this).text());
+                    $("#test > a").css({"color":"red", "background-color":"black"});
+                    //$(this).css({"color":"red", "background-color":"black"});
                 });
 
                 //$('nav a').attr("href", "#");
@@ -66,7 +74,7 @@
                 $(".test-btn").text("<general>");
                 $(".test-btn").attr("href", "{{ path('general') }}");
 
-                $("#test > a").css({"color":"red", "background-color":"black"});
+                //$("#test > a").css({"color":"red", "background-color":"black"});
             })
         </script>
         {% block menuJ %}{% endblock %}

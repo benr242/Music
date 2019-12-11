@@ -40,8 +40,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+            <state relative-caret-position="220">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
@@ -413,7 +413,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="443020000" />
+    <option name="totallyTimeSpent" value="447376000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -801,8 +801,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+        <state relative-caret-position="220">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
         </state>
       </provider>
     </entry>
