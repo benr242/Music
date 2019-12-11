@@ -65,6 +65,8 @@
                 $(".test-btn").removeClass("btn-danger");
                 $(".test-btn").text("<general>");
                 $(".test-btn").attr("href", "{{ path('general') }}");
+
+                $("#test > a").css({"color":"red", "background-color":"black"});
             })
         </script>
         {% block menuJ %}{% endblock %}
@@ -110,7 +112,7 @@
                         <li id="general" class="nav-item">
                             <a class="nav-link btn btn-primary" href="{{ path('general') }}">[GENERAL]</a>
                         </li>
-                        <li class="nav-item">
+                        <li id="test" class="nav-item">
                             <a class="nav-link btn btn-primary test-btn" href="#">test</a>
                         </li>
                     </ul>
