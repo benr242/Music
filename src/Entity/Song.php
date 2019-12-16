@@ -41,6 +41,11 @@ class Song
      */
     private $number;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $loge;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -90,6 +95,18 @@ class Song
     public function setNumber(int $number): self
     {
         $this->number = $number;
+
+        return $this;
+    }
+
+    public function getLoge(): ?string
+    {
+        return $this->loge;
+    }
+
+    public function setLoge(?string $loge): self
+    {
+        $this->loge = $loge;
 
         return $this;
     }

@@ -44,6 +44,11 @@ class Album
      */
     private $year;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $loge;
+
     public function __construct()
     {
         $this->songs = new ArrayCollection();
@@ -117,6 +122,18 @@ class Album
     public function setYear(int $year): self
     {
         $this->year = $year;
+
+        return $this;
+    }
+
+    public function getLoge(): ?string
+    {
+        return $this->loge;
+    }
+
+    public function setLoge(?string $loge): self
+    {
+        $this->loge = $loge;
 
         return $this;
     }
