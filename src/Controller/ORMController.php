@@ -76,10 +76,11 @@ class ORMController extends AbstractController
      * @Route("/orm/showAllArtists",
      *     name="showAllArtists")
     */
-    public function showAllArtists(EntityManagerInterface $em, ArtistRepository $artistRep)
+    public function showAllArtists(EntityManagerInterface $em, ArtistRepository $artistRepo)
     {
-        $artistRepository = $em->getRepository(Artist::class);
-        $artists = $artistRepository->findAll();
+        //injected repository
+        //$artistRepository = $em->getRepository(Artist::class);
+        $artists = $artistRepo->findAll();
         //$artists = $em->getRepository(Artist::class)->findAll();
 
         //$artists = $artistRep->findAll();
