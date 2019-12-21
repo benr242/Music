@@ -119,3 +119,7 @@ li.disabledJQ > a {
     color: yellow;
 }
 
+.mywarning {
+    color: red;
+    background-color: black;
+}
