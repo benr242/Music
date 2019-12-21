@@ -85,10 +85,10 @@ class ORMController extends AbstractController
 
         //$artists = $artistRep->findAll();
 
-
         return $this->render('orm/showArtists.html.twig', [
             'artists' => $artists,
             'controller_name' => 'ORM Controller',
+            'testkey' => "test value",
         ]);
     }
 

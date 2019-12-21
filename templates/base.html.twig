@@ -58,7 +58,8 @@
 
 
                     //alert("disabled: " + $(this).text());
-                    $("#test > a").css({"color":"red", "background-color":"black"});
+                    //$("#test > a").css({"color":"red", "background-color":"black"});
+                    $("#test > a").toggleClass("yellow");
                     //$(this).css({"color":"red", "background-color":"black"});
                 });
 
@@ -96,6 +97,11 @@
 
         <main>
             {% block body %}
+
+                <pre>
+                    {{ dump() }}
+                </pre>
+
                 <div class="container">
                 <nav class="navbar navbar-expand-sm justify-content-center">
                     <ul class="navbar-nav">
