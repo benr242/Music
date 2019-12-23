@@ -207,6 +207,24 @@ class ArtistFixtures extends Fixture
         $song->setLength(500);
         $manager->persist($song);
 
+        $testArtist = new Artist();
+        $testAlbum = new Album();
+
+        $testArtist->setName("Ben Rose");
+        $testArtist->setSlug("ben");
+        $testAlbum->setName("test album");
+        $testAlbum->setYear(2019);
+        $manager->persist($testArtist);
+        $manager->persist($testAlbum);
+        $testAlbum->setArtist($testArtist);
+
+        $testSong1 = new Song();
+        $testSong1->setAlbum($testAlbum);
+        $testSong1->setName("test song 1");
+        $testSong1->setLength(69);
+        $testSong1->setNumber(1);
+        $manager->persist($testSong1);
+
         $manager->flush();
     }
 }
