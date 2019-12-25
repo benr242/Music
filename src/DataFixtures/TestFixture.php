@@ -27,13 +27,19 @@ class TestFixture extends Fixture
         $manager->persist($testAlbum);
         $testAlbum->setArtist($testArtist);
 
-        $testSong1 = new Song();
-        $testSong1->setName("test song 1");
-        $testSong1->setNumber(1);
-        $testSong1->setLength(69);
-        $testSong1->setAlbum($testAlbum);
-        $manager->persist($testSong1);
-        
+        $testSong = new Song();
+        $testSong->setName("test song 1");
+        $testSong->setNumber(1);
+        $testSong->setLength(69);
+        $testSong->setAlbum($testAlbum);
+        $manager->persist($testSong);
+        $testSong = new Song();
+        $testSong->setName("test song 2");
+        $testSong->setNumber(2);
+        $testSong->setLength(69);
+        $testSong->setAlbum($testAlbum);
+        $manager->persist($testSong);
+
         $manager->flush();
     }
 }
