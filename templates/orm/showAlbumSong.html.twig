@@ -47,7 +47,8 @@
          <div class="col-md-2">{{ song.number }}</div>
          <div class="col-md-2">{{ song.id }}</div>
          <div class="col-md-7">{{ song.name }}</div>
-         <div class="col-md-1"><a class="btn btn-outline-danger" href="#">-</a></div>
+         {#<div class="col-md-1"><a class="btn btn-outline-danger" href="#">-</a></div>
+#}         <div class="col-md-1"><a class="btn btn-outline-danger" href="{{ path('removeSong', {songId:song.id}) }}">-</a></div>
      </div>
         </td></tr>
     {% endfor %}
