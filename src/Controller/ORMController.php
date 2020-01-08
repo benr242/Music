@@ -383,7 +383,10 @@ class ORMController extends AbstractController
         $em->remove($song);
         $em->flush();
 
-        return $this->redirectToRoute('albumSongs', ['artistId' => $artist->getId(), 'albumId' => $album->getId()]);
+        return $this->redirectToRoute('albumSongs', [
+            'artistId' => $artist->getId(),
+            'albumId' => $album->getId()
+        ]);
     }
 
     /**
