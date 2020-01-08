@@ -369,6 +369,15 @@ class ORMController extends AbstractController
     }
 
     /**
+     * @Route("/orm/removeSong/{songId}
+     *     name="removeSong")
+     */
+    public function removeSon(int $songId, EntityManagerInterface $em, SongRepository $sr)
+    {
+        
+    }
+
+    /**
      * @Route("/orm/success",
      *      name="success")
      */
