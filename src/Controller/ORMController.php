@@ -69,6 +69,15 @@ class ORMController extends AbstractController
      */
     public function test()
     {
+        $em = $this->getDoctrine()->getManager();
+        $artistRepository = $em->getRepository(Artist::class);
+        $artist = $artistRepository->findOneBy([
+            'slug' => 'nun',
+        ]);
+
+        $em->remove($artist);
+        $em->flush();
+
         return new Response("test response");
     }
 
