@@ -376,12 +376,14 @@ class ORMController extends AbstractController
     {
         $song = $sr->find($songId);
         $album = $song->getAlbum();
+        $artist = $album->getArtist();
+
         $album->removeSong($song);
 
         $em->remove($song);
         $em->flush();
 
-        return $this->redirectToRoute('albumSongs');
+        return $this->redirectToRoute('albumSongs', ['artistId' => $artist->getId(), 'albumId' => $album->getId()]);
     }
 
     /**

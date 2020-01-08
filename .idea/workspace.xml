@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d181a11-1ebb-4986-befc-ccd46877804c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ORMController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ORMController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Controller/ORMController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="801">
-              <caret line="371" column="41" selection-start-line="371" selection-start-column="41" selection-end-line="371" selection-end-column="41" />
+            <state relative-caret-position="419">
+              <caret line="385" column="83" selection-start-line="385" selection-start-column="83" selection-end-line="385" selection-end-column="83" />
               <folding>
                 <element signature="e#34#55#0#PHP" expanded="true" />
                 <element signature="e#2202#2229#0#PHP" expanded="true" />
@@ -105,7 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>uman</find>
       <find>itis</find>
       <find>artistAdd</find>
       <find>addal</find>
@@ -135,6 +133,7 @@
       <find>show</find>
       <find>symfony</find>
       <find>albumSon</find>
+      <find>albumsong</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -442,12 +441,12 @@
       <workItem from="1573194778148" duration="105866000" />
       <workItem from="1575465726361" duration="54100000" />
       <workItem from="1576637704699" duration="90000" />
-      <workItem from="1576640355475" duration="56099000" />
+      <workItem from="1576640355475" duration="57887000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="517901000" />
+    <option name="totallyTimeSpent" value="519689000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -837,8 +836,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/ORMController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="801">
-          <caret line="371" column="41" selection-start-line="371" selection-start-column="41" selection-end-line="371" selection-end-column="41" />
+        <state relative-caret-position="419">
+          <caret line="385" column="83" selection-start-line="385" selection-start-column="83" selection-end-line="385" selection-end-column="83" />
           <folding>
             <element signature="e#34#55#0#PHP" expanded="true" />
             <element signature="e#2202#2229#0#PHP" expanded="true" />
