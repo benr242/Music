@@ -374,7 +374,14 @@ class ORMController extends AbstractController
      */
     public function removeSon(int $songId, EntityManagerInterface $em, SongRepository $sr)
     {
-        
+        $song = $sr->find($songId);
+        $album = $song->getAlbum();
+        $album->removeSong($song);
+
+        $em->remove($song);
+        $em->flush();
+
+        return $this->redirectToRoute('albumSongs');
     }
 
     /**
