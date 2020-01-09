@@ -53,8 +53,7 @@
      <div class="row">
          <div class="col-md-2">{{ album.year }}</div>
          <div class="col-md-9"><a href="{{ path('albumSongs', {albumId:album.id, artistId:artistId}) }}">{{ album.name }}</a></div>
-         {#<div class="col-md-1"><a class="btn btn-outline-danger" href="{{ path('removeSong', {songId:song.id}) }}">-</a></div>#}
-         <div class="col-md-1"><a class="btn btn-outline-danger" href="#">-</a></div>
+         <div class="col-md-1"><a class="btn btn-outline-danger" href="{{ path('removeAlbum', {albumId:album.id}) }}">-</a></div>
 
          {#
                      <td>{{ artist.id }}</td>

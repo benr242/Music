@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d181a11-1ebb-4986-befc-ccd46877804c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Controller/ORMController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ORMController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,11 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Controller/ORMController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="407" column="8" selection-start-line="407" selection-start-column="8" selection-end-line="407" selection-end-column="8" />
+            <state relative-caret-position="661">
+              <caret line="406" column="43" lean-forward="true" selection-start-line="406" selection-start-column="43" selection-end-line="406" selection-end-column="43" />
               <folding>
                 <element signature="e#34#55#0#PHP" expanded="true" />
                 <element signature="e#2202#2229#0#PHP" expanded="true" />
@@ -28,11 +28,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="629">
-              <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
+              <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
+              <folding>
+                <element signature="e#1703#1714#0#Twig" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -41,7 +44,7 @@
         <entry file="file://$PROJECT_DIR$/templates/orm/showAlbumSong.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="735">
-              <caret line="49" column="72" selection-start-line="49" selection-end-line="50" />
+              <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -117,7 +120,6 @@
       <find>showAll</find>
       <find>nav</find>
       <find>my `</find>
-      <find>artistA</find>
       <find>addSon</find>
       <find>disable</find>
       <find>framework</find>
@@ -134,6 +136,7 @@
       <find>albumSon</find>
       <find>rphan</find>
       <find>albumsong</find>
+      <find>artistA</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -174,8 +177,8 @@
         <option value="$PROJECT_DIR$/src/DataFixtures/TestFixture.php" />
         <option value="$PROJECT_DIR$/src/Entity/Artist.php" />
         <option value="$PROJECT_DIR$/templates/orm/showAlbumSong.html.twig" />
-        <option value="$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig" />
         <option value="$PROJECT_DIR$/src/Controller/ORMController.php" />
+        <option value="$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig" />
       </list>
     </option>
   </component>
@@ -441,12 +444,12 @@
       <workItem from="1573194778148" duration="105866000" />
       <workItem from="1575465726361" duration="54100000" />
       <workItem from="1576637704699" duration="90000" />
-      <workItem from="1576640355475" duration="67858000" />
+      <workItem from="1576640355475" duration="68459000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="529660000" />
+    <option name="totallyTimeSpent" value="530261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -801,24 +804,27 @@
     <entry file="file://$PROJECT_DIR$/templates/orm/showAlbumSong.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="735">
-          <caret line="49" column="72" selection-start-line="49" selection-end-line="50" />
+          <caret line="49" column="61" selection-start-line="49" selection-start-column="61" selection-end-line="49" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ORMController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="661">
+          <caret line="406" column="43" lean-forward="true" selection-start-line="406" selection-start-column="43" selection-end-line="406" selection-end-column="43" />
+          <folding>
+            <element signature="e#34#55#0#PHP" expanded="true" />
+            <element signature="e#2202#2229#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/orm/showArtistAlbum.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
-          <caret line="56" column="72" selection-start-line="56" selection-start-column="72" selection-end-line="56" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ORMController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="407" column="8" selection-start-line="407" selection-start-column="8" selection-end-line="407" selection-end-column="8" />
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
-            <element signature="e#34#55#0#PHP" expanded="true" />
-            <element signature="e#2202#2229#0#PHP" expanded="true" />
+            <element signature="e#1703#1714#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
