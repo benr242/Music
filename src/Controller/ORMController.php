@@ -409,6 +409,20 @@ class ORMController extends AbstractController
     }
 
     /**
+     * @Route("/orm/removeArtist/{artistId}",
+     *    name="removeArtist")
+     */
+    public function removeArtist(int $artistId, EntityManagerInterface $em, ArtistRepository $ar)
+    {
+        $artist = $ar->find($artistId);
+
+        $em->remove($artist);
+        $em->flush();
+
+        return $this->redirectToRoute('showAllArtists');
+    }
+
+    /**
      * @Route("/orm/success",
      *      name="success")
      */

@@ -33,9 +33,10 @@
         <div class="col-md-6"><a href="{{ path('addArtist') }}">Add Artist --></a></div>
     </div>
 #}
-    <table>
+    <table class="table table-bordered table-striped table-hover albums">
+        <tbody>
         {% for artist in artists %}
-            <tr>
+            <tr class="artist">
                 <td>{{ artist.id }}</td>
                 <td><a href="{{ path('artistAlbums', {'artistId':artist.id  , 'artistName':artist.name}, relative =  false) }}">{{ artist.name }}</a></td>
             </tr>
