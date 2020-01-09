@@ -372,7 +372,7 @@ class ORMController extends AbstractController
      * @Route("/orm/removeSong/{songId}",
      *     name="removeSong")
      */
-    public function removeSon(int $songId, EntityManagerInterface $em, SongRepository $sr)
+    public function removeSong(int $songId, EntityManagerInterface $em, SongRepository $sr)
     {
         $song = $sr->find($songId);
         $album = $song->getAlbum();
@@ -386,6 +386,25 @@ class ORMController extends AbstractController
         return $this->redirectToRoute('albumSongs', [
             'artistId' => $artist->getId(),
             'albumId' => $album->getId()
+        ]);
+    }
+
+    /**
+     * @Route("/orm/removeAlbum/{albumId}",
+     *     name="removeAlbum")
+     */
+    public function removeAlbum(int $albumId, EntityManagerInterface $em, AlbumRepository $ar)
+    {
+        $album = $ar->find($albumId);
+        $artist = $album->getArtist();
+
+        $artist->removeAlbum($album);
+
+        $em->remove($album);
+        $em->flush();
+
+        return $this->redirectToRoute('artistAlbums', [
+            'artistId' => $artist->getId(),
         ]);
     }
 
