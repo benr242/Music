@@ -178,13 +178,11 @@ class ORMController extends AbstractController
             ]);
 
             if(!$entity) {
+                $em->persist($artist);
+                $em->flush();
+                $flash = $artist->getName();
+                $this->addFlash('success', 'added artist: ' . $flash);
             }
-
-            $em->persist($artist);
-            $em->flush();
-
-            $flash = $artist->getName();
-            $this->addFlash('success', 'added artist: '.$flash);
 
 
             return $this->redirectToRoute('showAllArtists');
