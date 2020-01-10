@@ -9,8 +9,8 @@ use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArtistRepository")
- * @UniqueEntity(
- *     fields={"name", "slug"}
+ * @UniqueEntity(fields={"name"}, message="Name is already taken")
+ * @UniqueEntity(fields={"slug"}, message="Slug is already taken")
  * )
  */
 class Artist
