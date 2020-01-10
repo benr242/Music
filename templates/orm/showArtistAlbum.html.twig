@@ -50,17 +50,13 @@
     {% for album in artistAlbums %}
         <tr class="albums">
             <td>
-     <div class="row">
-         <div class="col-md-2">{{ album.year }}</div>
-         <div class="col-md-9"><a href="{{ path('albumSongs', {albumId:album.id, artistId:artistId}) }}">{{ album.name }}</a></div>
-         <div class="col-md-1"><a class="btn btn-outline-danger" href="{{ path('removeAlbum', {albumId:album.id}) }}">-</a></div>
-
-         {#
-                     <td>{{ artist.id }}</td>
-                     <td><a href="{{ path('artistAlbums', {'artistId':artist.id, 'artistName':artist.name}, relative =  false) }}">{{ artist.name }}</a></td>
-         #}
-    </div>
-        </td></tr>
+                <div class="row">
+                    <div class="col-md-2">{{ album.year }}</div>
+                    <div class="col-md-9"><a href="{{ path('albumSongs', {albumId:album.id, artistId:artistId}) }}">{{ album.name }}</a></div>
+                    <div class="col-md-1"><a class="btn btn-outline-danger" href="{{ path('removeAlbum', {albumId:album.id}) }}">-</a></div>
+                </div>
+            </td>
+        </tr>
     {% endfor %}
         </tbody>
     </table>
