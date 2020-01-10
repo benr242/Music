@@ -38,11 +38,12 @@
         {% for artist in artists %}
             <tr class="artist">
                 <td>
-                    <div class="col-4">{{ artist.id }}</div>
-                    <div class="col-7"><a href="{{ path('artistAlbums', {'artistId':artist.id  , 'artistName':artist.name}, relative =  false) }}">{{ artist.name }}</a></div>
-                    <div class="col-md-1"><a class="btn btn-outline-danger" href="{{ path('removeArtist', {artistId:artist.id}) }}">-</a></div>
+                    <div class="row">
+                        <div class="col-4">{{ artist.id }}</div>
+                        <div class="col-7"><a href="{{ path('artistAlbums', {'artistId':artist.id  , 'artistName':artist.name}, relative =  false) }}">{{ artist.name }}</a></div>
+                        <div class="col-md-1"><a class="btn btn-outline-danger" href="{{ path('removeArtist', {artistId:artist.id}) }}">-</a></div>
+                    </div>
                 </td>
-            </tr>
             </tr>
         {% endfor %}
         </tbody>
