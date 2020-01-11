@@ -104,10 +104,16 @@ class ORMController extends AbstractController
     /**
      * @Route("/orm/showArtistAlbums/{artistId}",
      *     name="artistAlbums",
-     *     defaults={"artistId": 59})
+     *     defaults={"artistId": 0})
      */
     public function showArtistAlbums(ArtistRepository $artistRepository, AlbumRepository $albumRepository, int $artistId)
     {
+        if(!$artistId) {
+            return $this->render('orm/index.html.twig', [
+                'controller_name' => 'ORMController',
+            ]);
+        }
+        
         //$artistAlbums = $albumRepository->findAll();
 
         //first arguement is the 'WHERE' (can be empty, ALL)
@@ -131,10 +137,15 @@ class ORMController extends AbstractController
     /**
      * @Route("/orm/showAlbumSongs/{artistId}/{albumId}",
      *     name="albumSongs",
-     *     defaults={"albumId": 66})
+     *     defaults={"albumId": 0})
      */
     public function showAlbumSongs(AlbumRepository $albumRepository, SongRepository $songRepository, int $albumId)
     {
+        if(!$albumId) {
+            return $this->render('orm/index.html.twig', [
+                'controller_name' => 'ORMController',
+            ]);
+        }
 
         $album = $albumRepository->findOneBy([
             'id' => $albumId,
