@@ -432,6 +432,22 @@ class ORMController extends AbstractController
     }
 
     /**
+     * @Route("/orm/clearAll",
+     *  name="clearAll")
+     */
+    public function clearAll(EntityManagerInterface $em, ArtistRepository $ar)
+    {
+        $artists = $ar->findAll();
+
+        foreach ($artists as $artist) {
+            $em->remove($artist);
+        }
+        $em->flush();
+        
+        return $this->redirectToRoute('showAllArtists');
+    }
+
+    /**
      * @Route("/orm/success",
      *      name="success")
      */
