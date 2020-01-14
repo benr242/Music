@@ -443,7 +443,7 @@ class ORMController extends AbstractController
             $em->remove($artist);
         }
         $em->flush();
-        
+
         return $this->redirectToRoute('showAllArtists');
     }
 
