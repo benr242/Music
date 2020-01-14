@@ -113,7 +113,7 @@ class ORMController extends AbstractController
                 'controller_name' => 'ORMController',
             ]);
         }
-        
+
         //$artistAlbums = $albumRepository->findAll();
 
         //first arguement is the 'WHERE' (can be empty, ALL)
