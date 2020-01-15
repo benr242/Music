@@ -31,12 +31,17 @@
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
         <script>
             $(document).ready(function () {
+                $("#albumAddSong").css("visibility", "hidden");
+                //$("#albumAddSong").css("display", "none");
                 $(".active").toggleClass("active");
                 var $current = "{{ app.request.get('_route') }}";
 
                 //alert("current route: <"+$current+">");
                 $('#'+$current).toggleClass("active");
 
+                if ($current == 'albumSongs') {
+                    $("#albumAddSong").css("visibility", "visible");
+                }
                 //$(#addartist).addClass("disabledJQ");
 
                 //alert("hellso");
@@ -49,7 +54,7 @@
                     evt.preventDefault();
                     //var msq = e.attr("text");
                     //e.addClass("btn-inactive")
-                    //alert("disabledJQ:");
+                    alert("disabledJQ:");
 
                     //alert($(this).attr("href"));
                     //alert($(this).attr("class"));
