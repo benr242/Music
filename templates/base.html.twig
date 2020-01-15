@@ -24,9 +24,6 @@
         <style>
             {% block menuCss %}
 
-            #addartist {visibility: hidden}
-            #addalbum {visibility: hidden}
-            #addsong {visibility: hidden}
 
             {% endblock %}
         </style>
@@ -34,10 +31,12 @@
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}"></script>
         <script>
             $(document).ready(function () {
+                $(".active").toggleClass("active");
                 var $current = "{{ app.request.get('_route') }}";
-                //if($current == 'addArtist') {
-                //    alert("current route: <"+$current+">");
-                //}
+                if($current == 'addArtist') {
+                    //alert("current route: <"+$current+">");
+                    $("#addArtist").toggleClass("active");
+                }
 
                 //$(#addartist).addClass("disabledJQ");
 
@@ -76,6 +75,7 @@
                 $(".test-btn").attr("href", "{{ path('general') }}");
 
                 //$("#test > a").css({"color":"red", "background-color":"black"});
+
             })
         </script>
         {% block menuJ %}{% endblock %}
