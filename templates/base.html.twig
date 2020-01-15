@@ -33,10 +33,11 @@
             $(document).ready(function () {
                 $(".active").toggleClass("active");
                 var $current = "{{ app.request.get('_route') }}";
-                if($current == 'addArtist') {
-                    //alert("current route: <"+$current+">");
-                    $("#addArtist").toggleClass("active");
-                }
+                //if($current == 'addArtist') {
+                    alert("current route: <"+$current+">");
+                    //$("#addArtist").toggleClass("active");
+                    $('#'+$current).toggleClass("active");
+                //}
 
                 //$(#addartist).addClass("disabledJQ");
 
@@ -107,7 +108,7 @@
                     <ul class="navbar-nav">
                         {#<a class="nav-link" href="{{ path('general') }}">General</a>#}
                         <a class="navbar-brand" href="{{ path('showAllArtists') }}"><img src="{{ asset('images/spaceDog.png') }}" HEIGHT="40px" width="40px" alt="HOME"></a>
-                        <li id="artists" class="nav-item">
+                        <li id="showAllArtists" class="nav-item">
                             <a class="nav-link btn btn-primary active" href="{{ path('showAllArtists') }}">Artists</a>
                         </li>
                         <li id="addArtist" class="nav-item">
