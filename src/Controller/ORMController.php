@@ -293,6 +293,7 @@ class ORMController extends AbstractController
 
     /**
      * @Route("/orm/albumAddSong/{albumId}",
+     *     defaults={"albumId" = 0},
      *     name="albumAddSong")
      */
     public function albumAddSong(Request $request, int $albumId, EntityManagerInterface $em, AlbumRepository $ar, SongRepository $sr)
