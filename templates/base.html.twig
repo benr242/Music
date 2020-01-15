@@ -33,11 +33,9 @@
             $(document).ready(function () {
                 $(".active").toggleClass("active");
                 var $current = "{{ app.request.get('_route') }}";
-                //if($current == 'addArtist') {
-                    alert("current route: <"+$current+">");
-                    //$("#addArtist").toggleClass("active");
-                    $('#'+$current).toggleClass("active");
-                //}
+
+                //alert("current route: <"+$current+">");
+                $('#'+$current).toggleClass("active");
 
                 //$(#addartist).addClass("disabledJQ");
 
