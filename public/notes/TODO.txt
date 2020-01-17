@@ -1,0 +1,6 @@
+global add song
+AJAK dependant dropdown
+
+add song 'active'
+
+logos for albums artists sonngs
