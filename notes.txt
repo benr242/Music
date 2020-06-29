@@ -1,3 +1,5 @@
+http://127.0.0.1:8000/orm/showArtistAlbums/152
+
 during 'composer install' (had to delete composer.lock)S
     Package symfony/lts is abandoned, you should avoid using it. Use symfony/flex instead.
 
@@ -11,3 +13,5 @@ ORM
 
 Bootstrap
 Fixtures to add Artists and Album
+
+GIT PUSH
