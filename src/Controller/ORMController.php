@@ -102,7 +102,7 @@ class ORMController extends AbstractController
     }
 
     /**
-     * @Route("/orm/showArtistAlbums/{artistId}",
+         * @Route("/orm/showArtistAlbums/{artistId}",
      *     name="artistAlbums",
      *     defaults={"artistId": 0})
      */

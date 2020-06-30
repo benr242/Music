@@ -37,8 +37,11 @@
                 var $current = "{{ app.request.get('_route') }}";
 
                 $(".active").toggleClass("active");
-                $('#'+$current).toggleClass("active");
 
+                $('#'+$current).toggleClass("active");
+                //$("a.active").css("color", "red");
+
+                //alert("active: "+$.active);
                 //alert("current route: <"+$current+">");
 
                 if ($current == 'albumSongs') {

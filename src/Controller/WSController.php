@@ -19,6 +19,7 @@ class WSController extends Controller
      */
     public function index()
     {
+        return $this->redirectToRoute('showAllArtists');
         return $this->render('index/index.html.twig');
     }
 }
