@@ -1,0 +1,63 @@
+#Upgrade Fedora System
+sudo dnf upgrade --refresh -y
+
+
+##give benr242 sudo permission
+sudo usermod -aG wheel benr242
+
+connect internet
+sudo dnf upgrade
+
+ALIASES
+	.bashrc .bash_aliases
+	alias ..="cd .."
+
+sudo dnf upgrade
+sudo dnf makecache
+sudo dnf install vim
+
+# install flatpak? repositorie
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --if-not-exists fedora oci+https://registry.fedoraproject.org
+
+#install remi repository/php
+sudo dnf -y install https://rpms.remirepo.net/fedora/remi-release-35.rpm
+sudo dnf config-manager --set-enabled remi
+sudo dnf module reset php
+sudo dnf module install php:remi-7.4
+
+sudo dnf install gnome-tweak-tool
+sudo dnf install transmission
+
+#install Remi repository
+sudo dnf install http://rpms.remirepo.net/fedora/remi-release-35.rpm
+
+#install RPMFusion free repo
+sudo dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-35.noarch.rpm https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-35.noarch.rpm
+
+#install HandBreak for video type switching
+sudo dnf install handbrake-gui
+
+#Plex
+sudo dnf upgrade --refresh -y
+
+sudo tee /etc/yum.repos.d/plex.repo<<EOF
+[Plexrepo]
+name=plexrepo
+baseurl=https://downloads.plex.tv/repo/rpm/\$basearch/
+enabled=1
+gpgkey=https://downloads.plex.tv/plex-keys/PlexSign.key
+gpgcheck=1
+EOF
+
+sudo dnf install plexmediaserver
+
+sudo systemctl start plexmediaserver
+sudo systemctl enable plexmediaserver
+sudo dnf install plex-media-player
+----------
+
+sudo dnf install thunderbird
+
+sudo sudo dnf install snapd
+sudo snap install youtube-music-desktop-app

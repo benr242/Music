@@ -1,0 +1,5 @@
+cat /etc/os-release
+
+// Fedora linux kernel version
+uname -mrs
+/etc/skel/.bashrc
